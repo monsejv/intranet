@@ -97,7 +97,7 @@ const Home = () => {
     return(
         
         <Container fluid={true}>
-            <GeneralModal modal={true} />
+            <GeneralModal modalStatus={true} />
             <Row>
                 <Col sm="3" className="p-right-col" >
                     <div className="cards-left">

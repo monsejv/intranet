@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 import { Modal, ModalHeader, ModalBody, ModalFooter, Button } from 'reactstrap'
 
 const GeneralModal = props => {
-
+    let { modalStatus } = props
     
     const [modal, setModal] = useState(false);
 
