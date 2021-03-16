@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './style.css'
+import './style.scss'
 
 import { IconRadar } from '../../assets/Index'
 import { Card, 
@@ -13,7 +13,7 @@ import { Card,
 
 const RadarBox = props => {
     return(
-            <Card className="mb-3">
+            <Card className="mb-4 shadow">
                 <CardBody>
                 <CardImg src={IconRadar.default} className="icon" alt="Card image cap" />
                 <CardTitle tag="h5" className="mt-4">El radar</CardTitle>

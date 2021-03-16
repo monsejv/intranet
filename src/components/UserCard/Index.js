@@ -1,6 +1,6 @@
 import React from 'react' 
 
-import './style.css'
+import './style.scss'
 import { IconWhatsApp } from '../../assets/Index'
 
 import { Card,
@@ -19,7 +19,7 @@ const UserCard = props => {
             qrTeam,
             team } = props.data
     return(
-        <Card className="user-data mb-3">
+        <Card className="user-data mb-4 shadow">
             <CardBody>
                 <CardTitle className="mb-2">Mis proyectos</CardTitle>
                 <Media src={logoProyect} className="d-block mr-auto logo-citi" />

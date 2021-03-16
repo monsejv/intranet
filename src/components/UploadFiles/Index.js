@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './style.css'
+import './style.scss'
 
 import { Row,
         Col,
@@ -17,7 +17,7 @@ const UploadFiles = props => {
     return(
         <Row>
             <Col sm="12">
-            <Card className="file-wrapper mb-3">
+            <Card className="file-wrapper mb-3 shadow">
                 <CardBody>
                     <div className="d-flex">
                         <div className="icon-machina"></div>

@@ -25,7 +25,7 @@ const EventsCard = props => {
             textLink } = props.menu
 
     return(
-        <Card className="mb-3">
+        <Card className="mb-4 shadow">
             <CardBody>
                 <div className="d-flex justify-content-between">
                     <CardTitle>{cardTitle}</CardTitle>

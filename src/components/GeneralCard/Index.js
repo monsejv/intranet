@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './style.css'
+import './style.scss'
 
 import {
     Card, 
@@ -19,7 +19,7 @@ const GeneralCard = props => {
         textButton
       }  = props.data
     return(
-            <Card className="mb-3">
+            <Card className="mb-4 shadow">
                 <CardBody>
                 <CardImg  src={img} className={classImage} alt="Card image cap" />
                 <CardTitle tag="h5" className="mt-3">{title}</CardTitle>
