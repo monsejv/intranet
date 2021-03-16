@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 
 import { Container, Row, Col } from 'reactstrap';
 
@@ -14,17 +14,20 @@ import GeneralModal from '../components/GeneralModal/Index'
 
 import { cardsLeft } from '../lib/leftside'
 import { userData } from '../lib/userData'
-import { okrs,
-        goals, 
-        courseList } from '../lib/rightside'
+import {
+    okrs,
+    goals,
+    courseList
+} from '../lib/rightside'
 
-import { path,
-        workersMonth,
-        birthdays,
-        apps  } from '../lib/middleside'
+import {
+    path,
+    workersMonth,
+    birthdays,
+    apps
+} from '../lib/middleside'
 
 import api from '../lib/api'
-
 
 const Home = () => {
     const menuNews = {
@@ -51,17 +54,17 @@ const Home = () => {
         errorMessage: ''
     })
 
-    useEffect( () => {
+    useEffect(() => {
         const getEvents = async () => {
             try {
                 const events = await api.getEvents()
-                
+
                 if (stateEvents.events.length !== events.length) {
-                    setEvents({...stateEvents, events})
+                    setEvents({ ...stateEvents, events })
                 }
             } catch (error) {
-                if(!stateEvents.hasError){
-                    setEvents({ ...stateEvents, hasError: true})
+                if (!stateEvents.hasError) {
+                    setEvents({ ...stateEvents, hasError: true })
                 }
             }
         }
@@ -69,13 +72,13 @@ const Home = () => {
         const getNews = async () => {
             try {
                 const news = await api.getNews()
-                
+
                 if (stateNews.news.length !== news.length) {
-                    setNews({...stateNews, news})
+                    setNews({ ...stateNews, news })
                 }
             } catch (error) {
-                if(!stateNews.hasError){
-                    setNews({ ...stateNews, hasError: true})
+                if (!stateNews.hasError) {
+                    setNews({ ...stateNews, hasError: true })
                 }
             }
         }
@@ -88,36 +91,27 @@ const Home = () => {
                 console.log(error)
             }
         }
-
         getEvents()
         getNews()
         getBamboo()
     }, [stateEvents, stateNews])
 
-    return(
-        
-        <Container fluid={true}>
+    return (
+
+        <Container fluid>
             <GeneralModal modal={true} />
             <Row>
-                <Col sm="3" className="p-right-col" >
-                    <div className="cards-left">
-                        <RadarBox />
-                        { cardsLeft.map(card => {
-                            return <GeneralCard data={card} />
-                        })}
-                    </div>
+                <Col sm="3" >
+                    <RadarBox />
+                    {cardsLeft.map( card => <GeneralCard data={card} /> )}
                 </Col>
                 <Col sm="6">
                     <Header />
                     <Row>
                         <Col sm="12">
-                                <div class="apps-wrapper d-flex justify-content-around mb-3">
-                                    {
-                                        apps.map(list =>{
-                                            return <div className={list.class}></div>
-                                        })
-                                    }
-                                </div>
+                            <div class="apps-wrapper d-flex justify-content-around mb-3">
+                                { apps.map(list => <div className={list.class}></div> )}
+                            </div>
                         </Col>
                     </Row>
                     <UploadFiles />
@@ -128,31 +122,29 @@ const Home = () => {
                         <Col>
                             <SecondaryCard data={workersMonth} />
                         </Col>
-                        <Col>   
+                        <Col>
                             <GeneralCard data={path} />
                         </Col>
                     </Row>
                     <Row>
                         <Col>
-                        {
-                            stateNews.news.length && <EventsCard cardData={stateNews.news[0]} menu={menuNews} />
-                        } 
+                            {
+                                stateNews.news.length && <EventsCard cardData={stateNews.news[0]} menu={menuNews} />
+                            }
                         </Col>
                         <Col>
-                        {
-                            stateEvents.events.length && <EventsCard cardData={stateEvents.events[0]} menu={menuEvents} />
-                        }
+                            {
+                                stateEvents.events.length && <EventsCard cardData={stateEvents.events[0]} menu={menuEvents} />
+                            }
                         </Col>
                     </Row>
                 </Col>
-                <Col sm="3" className="p-left-col">
-                    <div className="cards-right">
-                       <UserMenu data={userData} />
-                       <UserCard data={userData} />
-                       <SecondaryCard data={courseList} />
-                       <GeneralCard data={okrs} />
-                       <SecondaryCard data={goals} />
-                    </div>
+                <Col sm="3">
+                    <UserMenu data={userData} />
+                    <UserCard data={userData} />
+                    <SecondaryCard data={courseList} />
+                    <GeneralCard data={okrs} />
+                    <SecondaryCard data={goals} />
                 </Col>
             </Row>
         </Container>

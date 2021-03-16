@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './style.css'
+import './style.scss'
 import {Link} from 'react-router-dom'
 import { Media, Form, FormGroup, Input} from 'reactstrap'
 import { Logo } from '../../assets/Index'

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './style.css'
+import './style.scss'
 import { IconApp } from '../../assets/Index'
 import { Media } from 'reactstrap'
 
@@ -11,7 +11,7 @@ const UserMenu = props => {
         position
     } = props.data
     return(
-        <div className="user-wrapper d-flex justify-content-between mb-3">
+        <div className="user-wrapper d-flex justify-content-between mb-4">
             <Media className="icon-app"  src={IconApp.default} />
             <div className="d-flex">
                 <Media className="user"  src={userImg} />

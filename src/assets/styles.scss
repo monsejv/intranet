@@ -63,28 +63,6 @@ body {
     margin: auto!important;
 }
 
-.paddings-col{
-    padding-left: 8px!important;
-    padding-right: 8px!important;
-}
-
-.p-left-col{
-    padding-left: 8px!important;
-}
-
-.p-right-col{
-    padding-right: 8px!important;
-}
-
-.cards-left{
-    width: 256px;
-    float: right;
-}
-
-.cards-right{
-    width: 256px;
-}
-
 .btn {
     cursor: pointer;
     display: flex;
@@ -103,9 +81,6 @@ body {
 }
 
 .card{
-    .card-body{
-        padding: 16px;
-    }
     img{
         width: 100%;
         &.icon{
@@ -114,8 +89,6 @@ body {
         }
     }
 }
-
-
 
 //Apps
 

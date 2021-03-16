@@ -1,6 +1,6 @@
 import React from 'react'
 
-import './style.css'
+import './style.scss'
 import { Card,
         CardBody,
         CardTitle,
@@ -23,7 +23,7 @@ const SecondaryCard = props => {
             members,
             birthdays } = props.data
     return(
-        <Card className="mb-3">
+        <Card className="mb-4 shadow">
             <CardBody>
                 { birthdays  ?
                         <div className="d-flex justify-content-between">
