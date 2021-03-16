@@ -1,0 +1,129 @@
+// Goals
+
+.badge-wrapper{
+    .icon-badge{
+        width: 70px;
+        height: 60px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        &.rebooter{
+            background-image: url('../../assets/images/badge-rebooter.svg');
+            background-position: -15px;
+        }
+        &.star{
+            background-image: url('../../assets/images/badge-star.svg');
+            background-position: center;
+        }
+        &.common{
+            background-image: url('../../assets/images/badge-common.svg');
+            background-position: right;
+        }
+    }
+}
+
+//Courses
+
+.cursos-wrapper{
+    margin-bottom: 15px;
+    margin-top: 15px;
+    img{
+        height: 40px;
+        width: 48px;
+        margin-right: 10px;
+    }
+    p{
+        margin-bottom: 0px;
+        font-size: 12px;
+    }
+    .text-success{
+        color: #0f901e;
+        font-size: 10px;
+    }
+    .progress{
+        height: 8px;
+        background: #f6f9fc;
+        width: 100%;
+        border-radius: 4px;
+        .progress-bar{
+            background: linear-gradient(-225deg, rgb(248, 149, 33) 0%, rgb(255, 218, 110) 100%)!important;
+            height: 8px;
+            border-radius: 4px;
+        }
+    }
+    &:last-of-type{
+        margin-bottom: 7px;
+    }
+}
+
+//RebootersOfMonth
+
+.rebooters{
+    position: relative;
+    width: 100%;
+    height: 58px;
+    padding-top: 10px;  
+    .member-wrapper{
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        img{
+            border-radius: 50%;
+            width: 35px;
+            vertical-align: middle;
+            align-self: center;
+        }
+        &:nth-of-type(2){
+            left: 12%;
+        }
+        &:nth-of-type(3){
+            left: 24%;
+        }
+        &:nth-of-type(4){
+            left: 36%;
+        }
+        &:nth-of-type(5){
+            left: 48%;
+        }
+        &:nth-of-type(6){
+            left: 60%;
+        }
+        &:nth-of-type(7){
+            left: 72%;
+        }
+        &:nth-of-type(8){
+            left: 84%;
+        }
+        &.number{
+            width: 35px;
+            height: 35px;
+            background: #f89521;
+            border-radius: 50%;
+            .text-center{
+                color: white;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+.bg-stars{
+    background-image: url('../../assets/images/bg-stars.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+}
+
+.bg-party{
+    background-image: url('../../assets/images/bg-party.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 40px;
+    position: absolute;
+    bottom: 35px;
+    left: 0;
+}

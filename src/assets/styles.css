@@ -1,0 +1,173 @@
+@font-face {
+  font-family: 'AvenirLTStd-Medium';
+  src: local("AvenirLTStd-Medium"), url("./fonts/AvenirLTStd-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'AvenirLTStd-Book';
+  src: local("AvenirLTStd-Book"), url("./fonts/AvenirLTStd-Book.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'AvenirLTStd-Roman';
+  src: local("AvenirLTStd-Roman"), url("./fonts/AvenirLTStd-Roman.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'AvenirLTStd-Heavy';
+  src: local("AvenirLTStd-Heavy"), url("./fonts/AvenirLTStd-Heavy.woff") format("woff");
+}
+
+.font-avenir-heavy {
+  font-family: 'AvenirLTStd-Heavy';
+}
+
+.font-avenir-roman {
+  font-family: 'AvenirLTStd-Roman';
+}
+
+.font-avenir-black {
+  font-family: "AvenirLTStd-Black";
+}
+
+.font-avenir-medium {
+  font-family: "AvenirLTStd-Medium";
+}
+
+.text-machina-red {
+  color: #ef4136;
+}
+
+.text-orange {
+  color: #f89521;
+}
+
+body {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: #5f5f5f !important;
+  font-weight: 500 !important;
+  background-color: #f9fbfd !important;
+  max-width: 1400px;
+  margin: auto !important;
+}
+
+.paddings-col {
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+}
+
+.p-left-col {
+  padding-left: 8px !important;
+}
+
+.p-right-col {
+  padding-right: 8px !important;
+}
+
+.cards-left {
+  width: 256px;
+  float: right;
+}
+
+.cards-right {
+  width: 256px;
+}
+
+.btn {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f89521;
+  border-color: #f89521;
+  font-size: 12px;
+  height: 32px;
+}
+
+.btn.next {
+  padding-right: 40px;
+  background-image: url("./images/icon-arrow-right.svg");
+  background-position: calc(100% - 10px) center;
+  background-repeat: no-repeat;
+}
+
+.card .card-body {
+  padding: 16px;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card img.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.apps-wrapper {
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.apps-wrapper div[class^="app-icon"] {
+  height: 64px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+  margin-bottom: 2rem;
+}
+
+.apps-wrapper .app-icon-google {
+  background-image: url("./images/icon-google.svg");
+}
+
+.apps-wrapper .app-icon-gmail {
+  background-image: url("./images/icon-gmail.svg");
+}
+
+.apps-wrapper .app-icon-drive {
+  background-image: url("./images/icon-drive.svg");
+}
+
+.apps-wrapper .app-icon-calendar {
+  background-image: url("./images/icon-calendar.svg");
+}
+
+.apps-wrapper .app-icon-slack {
+  background-image: url("./images/icon-slack.svg");
+}
+
+.apps-wrapper .app-icon-jira {
+  background-image: url("./images/icon-jira.svg");
+}
+
+.apps-wrapper .app-icon-confluence {
+  background-image: url("./images/icon-confluence.svg");
+}
+
+.apps-wrapper .app-icon-invision {
+  background-image: url("./images/icon-invision.svg");
+}
+
+.apps-wrapper .app-icon-sketch {
+  background-image: url("./images/icon-sketch.svg");
+}
+
+.apps-wrapper .app-icon-bamboo {
+  background-image: url("./images/icon-bamboo.svg");
+}
+
+a {
+  color: #f89521;
+}
+/*# sourceMappingURL=styles.css.map */

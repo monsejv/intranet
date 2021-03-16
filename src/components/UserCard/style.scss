@@ -1,0 +1,79 @@
+.user-data{
+    .logo-citi{
+        width: 72px;
+    }
+    a{
+        color: #f89521;
+        font-size: 12px;
+    }
+    .contact-wrapper{
+        .no-padding{
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        .whatsapp{
+            width: 40px;
+            height: 40px;
+        }
+        .contact{
+            font-size: 12px;
+            line-height: 12px;
+            text-align: center;
+            margin: 0px 5px;
+            align-self: center;
+        }
+        .join-group{
+            font-size: 12px;
+            margin-right: 2px;
+            margin-bottom: 0px;
+        }
+    }
+    .member{
+        position: relative;
+        width: 100%;
+        height: 42px;
+        padding-top: 3px;
+    }   
+    .member-wrapper{
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        img{
+            border-radius: 50%;
+            width: 35px;
+            vertical-align: middle;
+            align-self: center;
+        }
+        &:nth-of-type(2){
+            left: 10%;
+        }
+        &:nth-of-type(3){
+            left: 20%;
+        }
+        &:nth-of-type(4){
+            left: 30%;
+        }
+        &:nth-of-type(5){
+            left: 40%;
+        }
+        &:nth-of-type(6){
+            left: 50%;
+        }
+        &:nth-of-type(7){
+            left: 60%;
+        }
+        &:nth-of-type(8){
+            left: 70%;
+        }
+        &.number{
+            width: 35px;
+            height: 35px;
+            background: #f89521;
+            border-radius: 50%;
+            .text-center{
+                color: white;
+                font-size: 12px;
+            }
+        }
+    }
+}

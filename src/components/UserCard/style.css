@@ -1,0 +1,97 @@
+.user-data .logo-citi {
+  width: 72px;
+}
+
+.user-data a {
+  color: #f89521;
+  font-size: 12px;
+}
+
+.user-data .contact-wrapper .no-padding {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.user-data .contact-wrapper .whatsapp {
+  width: 40px;
+  height: 40px;
+}
+
+.user-data .contact-wrapper .contact {
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  margin: 0px 5px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.user-data .contact-wrapper .join-group {
+  font-size: 12px;
+  margin-right: 2px;
+  margin-bottom: 0px;
+}
+
+.user-data .member {
+  position: relative;
+  width: 100%;
+  height: 42px;
+  padding-top: 3px;
+}
+
+.user-data .member-wrapper {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}
+
+.user-data .member-wrapper img {
+  border-radius: 50%;
+  width: 35px;
+  vertical-align: middle;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.user-data .member-wrapper:nth-of-type(2) {
+  left: 10%;
+}
+
+.user-data .member-wrapper:nth-of-type(3) {
+  left: 20%;
+}
+
+.user-data .member-wrapper:nth-of-type(4) {
+  left: 30%;
+}
+
+.user-data .member-wrapper:nth-of-type(5) {
+  left: 40%;
+}
+
+.user-data .member-wrapper:nth-of-type(6) {
+  left: 50%;
+}
+
+.user-data .member-wrapper:nth-of-type(7) {
+  left: 60%;
+}
+
+.user-data .member-wrapper:nth-of-type(8) {
+  left: 70%;
+}
+
+.user-data .member-wrapper.number {
+  width: 35px;
+  height: 35px;
+  background: #f89521;
+  border-radius: 50%;
+}
+
+.user-data .member-wrapper.number .text-center {
+  color: white;
+  font-size: 12px;
+}
+/*# sourceMappingURL=style.css.map */

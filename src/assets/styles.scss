@@ -1,0 +1,170 @@
+$theme-colors:(
+    "primary": rgb(248, 149, 33)
+);
+
+$proto-orange:      #f89521;
+$machina-red:       #ef4136;
+$text-black:        #5f5f5f;
+$text-heavy-black:  #282d30;
+$border-gray:       #ebebeb;
+$border-medium-gray:  #9f9f9f;
+$body-bg:           #fbfbfb;
+
+
+@font-face {
+    font-family: 'AvenirLTStd-Medium';
+    src: local('AvenirLTStd-Medium'), url('./fonts/AvenirLTStd-Medium.woff') format('woff');
+}
+@font-face {
+    font-family: 'AvenirLTStd-Book';
+    src: local('AvenirLTStd-Book'), url('./fonts/AvenirLTStd-Book.woff') format('woff');
+}
+@font-face {
+    font-family: 'AvenirLTStd-Roman';
+    src: local('AvenirLTStd-Roman'), url('./fonts/AvenirLTStd-Roman.woff') format('woff');
+}
+@font-face {
+    font-family: 'AvenirLTStd-Heavy';
+    src: local('AvenirLTStd-Heavy'), url('./fonts/AvenirLTStd-Heavy.woff') format('woff');
+}
+
+.font-{
+    &avenir-heavy{
+        font-family: 'AvenirLTStd-Heavy';
+    }
+    &avenir-roman{
+        font-family: 'AvenirLTStd-Roman';
+    }
+    &avenir-black{
+        font-family:"AvenirLTStd-Black"
+    }
+    &avenir-medium{
+        font-family: "AvenirLTStd-Medium";
+    }
+}
+
+.text-{
+    &machina-red{
+        color:$machina-red;
+    }
+    &orange{
+        color:$proto-orange
+    }
+}
+  
+
+body {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color:$text-black!important;
+    font-weight: 500!important;
+    background-color: #f9fbfd!important;
+    max-width: 1400px;
+    margin: auto!important;
+}
+
+.paddings-col{
+    padding-left: 8px!important;
+    padding-right: 8px!important;
+}
+
+.p-left-col{
+    padding-left: 8px!important;
+}
+
+.p-right-col{
+    padding-right: 8px!important;
+}
+
+.cards-left{
+    width: 256px;
+    float: right;
+}
+
+.cards-right{
+    width: 256px;
+}
+
+.btn {
+    cursor: pointer;
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    background-color: $proto-orange;
+    border-color: $proto-orange;
+    font-size: 12px;
+    height: 32px;
+    &.next{
+        padding-right:40px;
+        background-image:url('./images/icon-arrow-right.svg');
+        background-position:calc(100% - 10px) center;
+        background-repeat: no-repeat;
+    }
+}
+
+.card{
+    .card-body{
+        padding: 16px;
+    }
+    img{
+        width: 100%;
+        &.icon{
+            width: 40px;
+            height: 40px;
+        }
+    }
+}
+
+
+
+//Apps
+
+.apps-wrapper{
+    width:100%;
+    flex-wrap: wrap;
+    div[class^="app-icon"]{
+        height:64px;
+        background-position: center;
+        background-size:contain;
+        background-repeat: no-repeat;
+        flex-basis: 20%;
+        margin-bottom:2rem;
+    }
+    .app-icon-{
+        &google{
+            background-image:url('./images/icon-google.svg')
+        }
+        &gmail{
+            background-image:url('./images/icon-gmail.svg')
+        }
+        &drive{
+            background-image:url('./images/icon-drive.svg')
+        }
+        &calendar {
+            background-image:url('./images/icon-calendar.svg')
+        }
+        &slack{
+            background-image:url('./images/icon-slack.svg')
+        }
+        &jira{
+            background-image:url('./images/icon-jira.svg')
+        }
+        &confluence{
+            background-image:url('./images/icon-confluence.svg')
+        }
+        &invision{
+            background-image:url('./images/icon-invision.svg')
+        }
+        &sketch{
+            background-image:url('./images/icon-sketch.svg')
+        }
+        &bamboo{
+            background-image:url('./images/icon-bamboo.svg')
+        }
+    }
+    
+}
+
+a{
+    color: $proto-orange;
+}

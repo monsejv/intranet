@@ -1,0 +1,47 @@
+.file-wrapper{
+    margin-top: 11px;
+    .icon-machina{
+        width: 24px;
+        height: 24px;
+        background-image: url('../../assets/images/icon-machina.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-flex;
+    }
+    .text-files{
+        font-size: 18px;
+        letter-spacing: 0px;
+        line-height: 22px;
+        span{
+            font-size: 14px;
+        }
+    }
+    #file-drop{
+        background-color: #fbfbfb;
+        border:1px dashed #9f9f9f;
+        border-radius:5px;
+        height: 56px;
+        .align-center{
+            align-self: center;
+        }
+    }
+    .my-form{
+        img{
+            width: 20px;
+            height: 20px;
+        }
+        p{
+            font-size: 10px;
+        }
+        .form-group{
+            margin-bottom: 0px;
+        }
+    } 
+    .files-support{
+        font-size: 8px;
+        margin-top: 6px;
+        p{
+            margin-bottom: 0px;
+        }
+    }
+}

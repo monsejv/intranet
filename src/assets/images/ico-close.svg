@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Cancelar</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="232" height="152" rx="10"></rect>
+        <filter x="-4.3%" y="-5.3%" width="108.6%" height="113.2%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.185477813   0 0 0 0 0.324045386   0 0 0 0 0.59162415  0 0 0 0.1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#F1F3F5" offset="0%"></stop>
+            <stop stop-color="#F3F5F7" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-4" x="0" y="0" width="888" height="856" rx="10"></rect>
+        <filter x="-7.1%" y="-5.3%" width="114.2%" height="114.7%" filterUnits="objectBoundingBox" id="filter-5">
+            <feMorphology radius="2" operator="erode" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="18" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="20" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.33241368 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="📌-Módulos---Mockups" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dashboard-/-01_Drag&amp;Drop-/-03_Drag&amp;Drop" transform="translate(-931.000000, -758.000000)">
+            <rect fill="#F9FBFD" x="0" y="0" width="1440" height="1024"></rect>
+            <g id="Body" transform="translate(96.000000, 39.000000)">
+                <g id="Blog" transform="translate(744.000000, 633.000000)">
+                    <g id="background">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                    <text id="Path-de-carrera" font-family="Avenir-Heavy, Avenir" font-size="18" font-weight="600" line-spacing="22" fill="#282D30">
+                        <tspan x="16" y="89">Path de carrera</tspan>
+                    </text>
+                </g>
+            </g>
+            <g id="Modal">
+                <rect id="Rectangle" fill="#000000" opacity="0.5" x="0" y="0" width="1440" height="1024"></rect>
+                <g id="modal" transform="translate(281.000000, 96.000000)">
+                    <g id="Mask">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-5)" xlink:href="#path-4"></use>
+                        <use fill="url(#linearGradient-3)" fill-rule="evenodd" xlink:href="#path-4"></use>
+                    </g>
+                    <g id="Group-2" transform="translate(211.000000, 536.000000)" fill="#949396">
+                        <g id="Doc-progress" transform="translate(0.000000, 103.000000)">
+                            <g id="Progress" transform="translate(54.000000, 14.000000)">
+                                <g id="Cancelar" transform="translate(384.000000, 8.000000)">
+                                    <path d="M9.44585131,8.26652769 L14.6890191,3.02335995 C15.0147714,2.69788553 15.0147714,2.16978869 14.6890191,1.84431427 C14.3632667,1.51856191 13.8357258,1.51856191 13.5099734,1.84431427 L8.26680564,7.08748202 L3.02335995,1.84431427 C2.69760758,1.51856191 2.17006664,1.51856191 1.84431427,1.84431427 C1.51856191,2.16978869 1.51856191,2.69788553 1.84431427,3.02335995 L7.08775997,8.26652769 L1.84431427,13.5096954 C1.51856191,13.8351699 1.51856191,14.3632667 1.84431427,14.6887411 C2.00719046,14.8513394 2.22065276,14.9327774 2.43383711,14.9327774 C2.64702146,14.9327774 2.86048376,14.8513394 3.02335995,14.6884632 L8.26680564,9.44529542 L13.5099734,14.6884632 C13.6728496,14.8513394 13.8863119,14.9327774 14.0994962,14.9327774 C14.3126806,14.9327774 14.5261429,14.8513394 14.6890191,14.6884632 C15.0147714,14.3629888 15.0147714,13.8348919 14.6890191,13.5094175 L9.44585131,8.26652769 Z" id="Shape"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

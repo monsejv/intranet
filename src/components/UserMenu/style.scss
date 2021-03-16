@@ -1,0 +1,33 @@
+.user-wrapper{
+    align-items: center;
+    .icon-app{
+        width: 30px;
+        height: 30px;
+    }
+    .user{
+        width: 53px;
+        height: 53px;
+    }
+    .icon-down{
+        display: block;
+        width: 10px;
+        height: 13px;
+        background-image: url('../../assets/images/icon-arrow-down.svg');
+        background-size: 10px;
+        background-repeat: no-repeat;
+    }
+    p{
+        font-family: 'AvenirLTStd-Heavy';
+        font-size: 16px;
+        font-weight: 900;
+        margin-bottom: 0px;
+        line-height: 1;
+        align-self: center;
+        span{
+            font-family: 'AvenirLTStd-Roman';
+            font-size: 12px;
+            font-weight: normal;
+            color: #5f5f5f;
+        }
+    }
+}

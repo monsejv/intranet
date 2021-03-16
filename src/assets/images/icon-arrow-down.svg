@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="15px" height="9px" viewBox="0 0 15 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>down</title>
+    <g id="✅-Final" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Prototype" transform="translate(-1329.000000, -65.000000)" fill="#9F9F9F" fill-rule="nonzero" stroke="#9F9F9F" stroke-width="0.5">
+            <g id="Header" transform="translate(1085.000000, 39.000000)">
+                <g id="user" transform="translate(55.000000, 0.000000)">
+                    <g id="down" transform="translate(196.804133, 29.863559) rotate(-90.000000) translate(-196.804133, -29.863559) translate(193.304133, 23.363559)">
+                        <path d="M0.858238818,6.0725985 L6.5185438,0.587342388 C6.65775316,0.452438178 6.65775316,0.236082368 6.5185438,0.101178158 C6.37933445,-0.0337260526 6.15607416,-0.0337260526 6.0168648,0.101178158 L0.104407018,5.83078906 C-0.0348023392,5.96569327 -0.0348023392,6.18204908 0.104407018,6.31695329 L6.0168648,12.0440188 C6.08515618,12.1101983 6.17708689,12.1458333 6.266391,12.1458333 C6.35569512,12.1458333 6.44762583,12.1127436 6.51591721,12.0440188 C6.65512657,11.9091146 6.65512657,11.6927588 6.51591721,11.5578546 L0.858238818,6.0725985 Z" id="Path"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

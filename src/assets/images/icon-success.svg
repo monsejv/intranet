@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="30px" viewBox="0 0 30 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-check</title>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#F1F3F5" offset="0%"></stop>
+            <stop stop-color="#F3F5F7" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-2" x="0" y="0" width="1072" height="856" rx="10"></rect>
+        <filter x="-5.9%" y="-5.3%" width="111.8%" height="114.7%" filterUnits="objectBoundingBox" id="filter-4">
+            <feMorphology radius="2" operator="erode" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="18" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="20" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.33241368 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <rect id="path-5" x="0" y="0" width="688" height="64" rx="10"></rect>
+        <filter x="-0.7%" y="-3.9%" width="101.3%" height="115.6%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="0" dy="3" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.819607843   0 0 0 0 0.835294118   0 0 0 0 0.874509804  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="📌-Módulos---Mockups" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dashboard-/-02_Probando-herramientas-/-02_Notificacion" transform="translate(-400.000000, -146.000000)">
+            <g id="Body" transform="translate(96.000000, 39.000000)">
+                <g id="Buscador" transform="translate(296.000000, 18.000000)"></g>
+            </g>
+            <g id="Modal">
+                <rect id="Rectangle" fill="#000000" opacity="0.5" x="0" y="0" width="1440" height="1024"></rect>
+                <g id="Probando-herramientas" transform="translate(184.000000, 96.000000)">
+                    <g id="many-white-post-it-papers-with-smiling-sad-and-neu-VPVC6AT">
+                        <mask id="mask-3" fill="white">
+                            <use xlink:href="#path-2"></use>
+                        </mask>
+                        <g id="Mask">
+                            <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-2"></use>
+                            <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                        </g>
+                    </g>
+                    <g id="Head" transform="translate(31.000000, 44.992896)" fill="#000000" font-family="Avenir-Medium, Avenir" font-size="40" font-weight="400" line-spacing="22">
+                        <text id="Probando-herramienta">
+                            <tspan x="0" y="45.0071042">Probando herramientas</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+            <g id="Notificacion" transform="translate(376.000000, 128.000000)">
+                <g id="Rectangle">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                    <use fill="#E6F5F2" fill-rule="evenodd" xlink:href="#path-5"></use>
+                </g>
+                <g id="icon-check" transform="translate(24.000000, 18.000000)" fill-rule="nonzero">
+                    <g id="Group" fill="#00A278">
+                        <circle id="Oval" cx="15" cy="15" r="13.8380859"></circle>
+                        <path d="M15,30 C6.72966797,30 0,23.2715039 0,15 C0,6.72966797 6.72966797,0 15,0 C23.2715039,0 30,6.72966797 30,15 C30,23.2715039 23.2715039,30 15,30 Z M15,2.32376953 C8.01005859,2.32376953 2.32376953,8.01005859 2.32376953,15 C2.32376953,21.9899414 8.01005859,27.6762305 15,27.6762305 C21.9899414,27.6762305 27.6762305,21.9887695 27.6762305,15 C27.6762305,8.01005859 21.9899414,2.32376953 15,2.32376953 Z" id="Shape"></path>
+                    </g>
+                    <path d="M13.1874609,20.5190039 C12.8760937,20.5190039 12.5786133,20.394668 12.3590039,20.1716016 L8.07164062,15.8145117 C7.62199219,15.3567188 7.62779297,14.6224219 8.08558594,14.1716016 C8.54337891,13.723125 9.27884766,13.7277539 9.72849609,14.1855469 L13.1537695,17.666543 L20.2401562,9.86214844 C20.6735156,9.38695313 21.4078711,9.35326172 21.8807227,9.78316406 C22.355918,10.2142383 22.3907812,10.9485352 21.959707,11.4249023 L14.0472656,20.1390234 C13.8323437,20.3760352 13.5302344,20.5131445 13.2107227,20.5201172 C13.2025781,20.5190039 13.1956055,20.5190039 13.1874609,20.5190039 Z" id="Path" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
