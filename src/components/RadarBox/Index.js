@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 import './style.scss'
 
@@ -10,15 +10,23 @@ import { Card,
         CardBody, 
         CardTitle,
         Input } from 'reactstrap'
+import GeneralModal from '../GeneralModal/Index'
 
 const RadarBox = props => {
+
+    const [modal, setModal] = useState(false);
+    const toggle = () => setModal(!modal);
+
     return(
+        <section>
+            <GeneralModal modalStatus={modal} radar={true} fc={toggle}  />
+            <GeneralModal modalStatus={modal} uphands={true} fc={toggle}  />
             <Card className="mb-4 shadow">
                 <CardBody>
                 <CardImg src={IconRadar.default} className="icon" alt="Card image cap" />
                 <CardTitle tag="h5" className="mt-4">El radar</CardTitle>
                 <CardText>Plataformas,técnicas, herramientas, lenguajes & frameworks en tendencia.</CardText>
-                <Button color="primary" className="next">Consultar radar</Button>
+                <Button color="primary" className="next" onClick={toggle}>Consultar radar</Button>
                 <CardTitle tag="h5" className="mt-4">Probando herramientas</CardTitle>
                 <CardText>Nuestro equipo de R+D de Reboot, se encuentra probando estas herramientas en fase beta. ¿Nos quieres ayudar a probar?</CardText>
                 <Button color="primary" className="next">Alza la mano</Button>
@@ -29,6 +37,7 @@ const RadarBox = props => {
                 </div>
                 </CardBody>
             </Card>
+        </section>
     )
 }
 

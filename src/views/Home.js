@@ -10,7 +10,6 @@ import UserMenu from '../components/UserMenu/Index'
 import UserCard from '../components/UserCard/Index'
 import SecondaryCard from '../components/SecondaryCard/Index';
 import EventsCard from '../components/EventsCard/Index'
-import GeneralModal from '../components/GeneralModal/Index'
 
 import { cardsLeft } from '../lib/leftside'
 import { userData } from '../lib/userData'
@@ -99,7 +98,6 @@ const Home = () => {
     return (
 
         <Container fluid>
-            <GeneralModal modal={true} />
             <Row>
                 <Col sm="3" >
                     <RadarBox />

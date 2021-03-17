@@ -78,6 +78,9 @@ body {
         background-position:calc(100% - 10px) center;
         background-repeat: no-repeat;
     }
+    &:hover{
+        background-color: $proto-orange;
+    }
 }
 
 .card{

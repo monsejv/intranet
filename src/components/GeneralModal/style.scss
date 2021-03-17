@@ -1,0 +1,73 @@
+.modal-dialog{
+    max-width: 850px;
+    .modal-header{
+        border-bottom: none;
+        .close{
+            font-size: 25px;
+            color: #282d30;
+            opacity: 1;
+        }
+    }
+    .modal-body{
+        padding: 0px 68px 20px 68px;
+    }
+}
+
+.upload{
+    .icon-machina{
+        width: 50px;
+        height: 50px;
+        background-image: url('../../assets/images/icon-machina.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-flex;
+    }
+    h1{
+        font-size: 40px;
+        font-family: 'AvenirLTStd-Medium';
+        .machina{
+            color: #df7a6f;
+        }
+    }
+    h4{
+        font-size: 20px;
+        font-family: 'AvenirLTStd-Medium';
+    }
+    #file-drop{
+        background-color: #fffbf6;
+        border: 1px dashed rgb(248, 149, 33);
+        height: 185px;
+        border-radius: 10px;
+        box-shadow: 0px 18px 40px -4px rgba(0, 0, 0, 0.33);
+        .align-center{
+            align-self: center;
+        }
+    }
+    .my-form{
+        font-size: 16px;
+        img{
+            width: 25px;
+            height: 25px;
+            margin: auto;
+            margin-bottom: 29px;
+        }
+        .form-group{
+            margin-bottom: 0px;
+        }
+    } 
+    .files-support{
+        font-size: 12px;
+        margin-top: 6px;
+        color: #5f5f5f;
+        p{
+            margin-bottom: 0px;
+        }
+    }
+    button{
+        width: 190px;
+        margin: auto;
+        text-align: center;
+        font-size: 14px;
+        padding: 10px 35px;
+    }
+}
