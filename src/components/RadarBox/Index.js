@@ -20,10 +20,12 @@ const RadarBox = props => {
     const [modalHnds, setModalH] = useState(false);
     const toggleHands = () => setModalH(!modalHnds);
 
+    const textAlert = 'Se te notificará un día antes de que abramos la prueba vía correo electrónico, para que estes al pendiente e inicies la prueba.'
+
     return(
         <section>
             <GeneralModal modalStatus={modal} radar={true} fc={toggle}  />
-            <GeneralModal modalStatus={modalHnds} uphands={true} fc={toggleHands} className="up-hand"  />
+            <GeneralModal modalStatus={modalHnds} uphands={true} fc={toggleHands} className="up-hand" textAlert={textAlert}  />
             <Card className="mb-4 shadow">
                 <CardBody>
                 <CardImg src={IconRadar.default} className="icon" alt="Card image cap" />

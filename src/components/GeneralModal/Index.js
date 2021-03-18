@@ -20,18 +20,24 @@ import { Modal,
         Table } from 'reactstrap'
 import { RadarMap, IconFile, SettingHand } from '../../assets/Index'
 
+import GeneralAlert from '../GeneralAlert/Index'
+
 import classnames from 'classnames';
 
 const GeneralModal = props => {
 
 
-    const { modalStatus, radar, fc, files, className, uphands  } = props
+    const { modalStatus, radar, fc, files, className, uphands, textAlert  } = props
 
     const [activeTab, setActiveTab] = useState('1');
 
     const toggle = tab => {
       if(activeTab !== tab) setActiveTab(tab);
     }
+
+    const [statusAlert, setVisible] = useState(false);
+
+    const onDismiss = () => setVisible(!statusAlert);
 
     const listTable = [{
         image: SettingHand.default,
@@ -66,9 +72,10 @@ const GeneralModal = props => {
         total: '150'
     }]
 
-    return(
+    return(    
         <Modal isOpen={modalStatus} toggle={fc} fullscreen className={className}> 
            <div className={ uphands ? "settings" : "" }></div> 
+            <GeneralAlert visible={statusAlert} text={textAlert} fc={onDismiss} />     
             <ModalHeader toggle={fc}>
                 { files &&
                     <div className="d-flex">
@@ -155,7 +162,7 @@ const GeneralModal = props => {
                                             <td>{list.vigency}</td>
                                             <td>{list.total}</td>
                                             <td><div className='active'></div>{list.status}</td>
-                                            <td><Button color="primary">Probar</Button></td>
+                                            <td><Button color="primary" onClick={onDismiss}>Probar</Button></td>
                                         </tr>
                                    )}
                                 </tbody>
@@ -190,7 +197,7 @@ const GeneralModal = props => {
                                             <td>{list.vigency}</td>
                                             <td>{list.total}</td>
                                             <td><div className='inactive'></div>Inactivo</td>
-                                            <td><Button color="primary">Apartar lugar</Button></td>
+                                            <td><Button color="primary" onClick={onDismiss}>Apartar lugar</Button></td>
                                         </tr>
                                    )}
                                 </tbody>
