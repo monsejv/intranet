@@ -2,6 +2,7 @@ import React from 'react'
 
 import Home from './views/Home'
 import Index from './views/Index'
+import Upload from './views/Upload'
 
 
 import {
@@ -24,6 +25,13 @@ function App() {
       <Route
         path='/home'
         component={Home}
+        exact
+      />
+    </Switch>
+    <Switch>  
+      <Route
+        path='/upload'
+        component={Upload}
         exact
       />
     </Switch>

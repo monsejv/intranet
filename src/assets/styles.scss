@@ -144,3 +144,58 @@ body {
 a{
     color: $proto-orange;
 }
+
+table{
+    border-collapse: separate;
+    border-spacing: 0 8px;
+    thead{
+        tr{
+            background: #ececec;
+        }
+    }
+    tbody{
+        tr{
+            background: #ffffff;
+            border-radius: 10px;
+            td{
+                font-family: 'AvenirLTStd-Roman';
+                font-size: 14px;
+                border-top: none;
+                .active, .inactive{
+                    background: #6dd400;
+                    border-radius: 3.6px;
+                    height: 16px;
+                    width: 16px;
+                    display: inline-block;
+                    margin-right: 10px;
+                    vertical-align: middle;
+                }
+                .inactive{
+                    background: #ff0e00;
+                }
+            }
+        }
+    }
+    th, td{
+        border-top: none!important;
+        border-bottom: none!important;
+    }
+}
+
+
+.nav-tabs{
+    width: 67%;
+    .nav-link{
+        color: #5f5f5f;
+        font-family: 'AvenirLTStd-Medium';
+        cursor: pointer;
+        &.active{
+            background: none;
+            border: none;
+            border-bottom: 2px solid #f89521;
+            color: #f89521;
+            font-family: 'AvenirLTStd-Heavy';
+        }
+    }
+
+}

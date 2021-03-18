@@ -17,10 +17,13 @@ const RadarBox = props => {
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
 
+    const [modalHnds, setModalH] = useState(false);
+    const toggleHands = () => setModalH(!modalHnds);
+
     return(
         <section>
             <GeneralModal modalStatus={modal} radar={true} fc={toggle}  />
-            <GeneralModal modalStatus={modal} uphands={true} fc={toggle}  />
+            <GeneralModal modalStatus={modalHnds} uphands={true} fc={toggleHands} className="up-hand"  />
             <Card className="mb-4 shadow">
                 <CardBody>
                 <CardImg src={IconRadar.default} className="icon" alt="Card image cap" />
@@ -29,7 +32,7 @@ const RadarBox = props => {
                 <Button color="primary" className="next" onClick={toggle}>Consultar radar</Button>
                 <CardTitle tag="h5" className="mt-4">Probando herramientas</CardTitle>
                 <CardText>Nuestro equipo de R+D de Reboot, se encuentra probando estas herramientas en fase beta. ¿Nos quieres ayudar a probar?</CardText>
-                <Button color="primary" className="next">Alza la mano</Button>
+                <Button color="primary" className="next" onClick={toggleHands}>Alza la mano</Button>
                 <CardText className="mt-4 font-avenir-medium">¿Quieres proponer una herramienta?</CardText>
                 <div className="custom-form-wrapper">
                     <Input placeholder="Ingresa tu sugerencia" />
