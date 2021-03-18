@@ -28,13 +28,6 @@ function App() {
         exact
       />
     </Switch>
-    <Switch>  
-      <Route
-        path='/upload'
-        component={Upload}
-        exact
-      />
-    </Switch>
   </Router>
   );
 }
