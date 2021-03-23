@@ -199,3 +199,30 @@ table{
     }
 
 }
+
+.modal-dialog{
+    max-width: 850px;
+    background: linear-gradient(-180deg, rgb(241, 243, 245) 0%, rgb(243, 245, 247) 100%);
+    border-radius: 10px;
+    .modal-header{
+        border-bottom: none;
+        z-index: 99;
+        .modal-title{
+            font-family: 'AvenirLTStd-Medium';
+            font-size: 40px;
+            font-weight: 500;
+            color: #000000;
+        }
+        .close{
+            font-size: 25px;
+            color: #282d30;
+            opacity: 1;
+        }
+    }
+    .modal-body{
+        padding: 0px 30px 20px 30px;
+        min-height: 300px;
+        max-height: 700px;
+        overflow: scroll;
+    }
+}

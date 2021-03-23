@@ -6,12 +6,14 @@ export const cardsLeft = [{
     img: `${Illustration.default}`,
     classImage: '',
     text: 'Tenemos este AB Testing corriendo en este momento ¿Nos quieres ayudar a probar?',
-    textButton: 'Probar prototipo'
+    textButton: 'Probar prototipo',
+    showModalFc: 'toggleProto',
 },
 {
     title: 'Herramientas de trabajo',
     img: `${IconBook.default}`,
     classImage: 'icon',
     text: '',
-    textButton: 'Consultar herramientas'
+    textButton: 'Consultar herramientas',
+    showModalFc: 'toggleSettings'
 }]

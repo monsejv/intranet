@@ -10,7 +10,11 @@ import { Card,
         CardBody, 
         CardTitle,
         Input } from 'reactstrap'
+
 import GeneralModal from '../GeneralModal/Index'
+import TableModal from '../TableModal/Index'
+
+import { herramientas } from '../../lib/modals'
 
 const RadarBox = props => {
 
@@ -25,7 +29,7 @@ const RadarBox = props => {
     return(
         <section>
             <GeneralModal modalStatus={modal} radar={true} fc={toggle}  />
-            <GeneralModal modalStatus={modalHnds} uphands={true} fc={toggleHands} className="up-hand" textAlert={textAlert}  />
+            <TableModal modalStatus={modalHnds} dataModal={herramientas} fc={toggleHands} className="up-hand" textAlert={textAlert}  />
             <Card className="mb-4 shadow">
                 <CardBody>
                 <CardImg src={IconRadar.default} className="icon" alt="Card image cap" />

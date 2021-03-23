@@ -1,0 +1,43 @@
+.up-hand{
+    .modal-content{
+        background: linear-gradient(-180deg, rgb(241, 243, 245) 0%, rgb(243, 245, 247) 100%);
+    }
+}
+.settings{
+    background-image: url('../../assets/images/modaBackground.png');
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 295px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+}
+
+.data-setting{
+    font-family: 'AvenirLTStd-Medium';
+    img{
+        height: 40px;
+        width: 56px;
+    }
+    .name-skill{
+        font-size: 14px;
+        font-weight: 500;
+        color: #222222;
+        margin-bottom: 0px;
+    }
+    .version{
+        font-size: 12px;
+        color: #9f9f9f;
+        margin-bottom: 0px;
+    }
+}
+
+.title{
+    font-size: 20px;
+    font-weight: 500;
+    color: #282d30;
+    margin-top: 15px;
+}

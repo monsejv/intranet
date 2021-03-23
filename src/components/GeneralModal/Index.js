@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import './style.scss'
 
@@ -9,73 +9,17 @@ import { Modal,
         Form, 
         FormGroup, 
         Input, 
-        Button, 
-        TabContent, 
-        TabPane, 
-        Nav, 
-        NavItem, 
-        NavLink, 
-        Row, 
-        Col,
-        Table } from 'reactstrap'
-import { RadarMap, IconFile, SettingHand } from '../../assets/Index'
+        Button } from 'reactstrap'
 
-import GeneralAlert from '../GeneralAlert/Index'
-
-import classnames from 'classnames';
+import { RadarMap, IconFile} from '../../assets/Index'
 
 const GeneralModal = props => {
 
 
-    const { modalStatus, radar, fc, files, className, uphands, textAlert  } = props
-
-    const [activeTab, setActiveTab] = useState('1');
-
-    const toggle = tab => {
-      if(activeTab !== tab) setActiveTab(tab);
-    }
-
-    const [statusAlert, setVisible] = useState(false);
-
-    const onDismiss = () => setVisible(!statusAlert);
-
-    const listTable = [{
-        image: SettingHand.default,
-        name: 'Herramienta 01',
-        version: 'Versión 1.0',
-        vigency: '30 días',
-        total: '22/150',
-        status: 'Activo'
-    },
-    {
-        image: SettingHand.default,
-        name: 'Herramienta 02',
-        version: 'Versión 1.10',
-        vigency: '50 días',
-        total: '87/200',
-        status: 'Activo'
-    },
-    {
-        image: SettingHand.default,
-        name: 'Herramienta 03',
-        version: 'Versión 2.5',
-        vigency: '30 días',
-        total: '48/150',
-        status: 'Activo'
-    }]
-
-    const listComingSoon = [{
-        image: SettingHand.default,
-        name: 'Herramienta 01',
-        version: 'Versión 1.0',
-        vigency: '40 días',
-        total: '150'
-    }]
+    const { modalStatus, radar, fc, files, className } = props
 
     return(    
-        <Modal isOpen={modalStatus} toggle={fc} fullscreen className={className}> 
-           <div className={ uphands ? "settings" : "" }></div> 
-            <GeneralAlert visible={statusAlert} text={textAlert} fc={onDismiss} />     
+        <Modal isOpen={modalStatus} toggle={fc} fullscreen className={className}>   
             <ModalHeader toggle={fc}>
                 { files &&
                     <div className="d-flex">
@@ -85,9 +29,6 @@ const GeneralModal = props => {
                             <h4>Solo necesitamos tu INE y Comprobante de domicilio</h4>
                         </div>
                     </div>
-                }
-                {   uphands &&
-                        <h1>Probando herramientas</h1>
                 }
             </ModalHeader>
             <ModalBody>
@@ -112,100 +53,6 @@ const GeneralModal = props => {
                         <p className="font-avenir-medium">Tamaño máximo: 10MB</p>
                     </div>
                     <Button color="primary">Enviar documentos</Button>
-                </div>
-             }
-             { uphands &&
-                <div>
-                    <Nav tabs>
-                    <NavItem>
-                        <NavLink
-                        className={classnames({ active: activeTab === '1' })}
-                        onClick={() => { toggle('1'); }}
-                        >
-                        Probando
-                        </NavLink>
-                    </NavItem>
-                    <NavItem>
-                        <NavLink
-                        className={classnames({ active: activeTab === '2' })}
-                        onClick={() => { toggle('2'); }}
-                        >
-                        Proximamente
-                        </NavLink>
-                    </NavItem>
-                    </Nav>
-                    <TabContent activeTab={activeTab}>
-                    <TabPane tabId="1">
-                        <Row>
-                        <Col sm="12">
-                            <p className="font-avenir-medium title">Herramientas fase beta</p>
-                            <Table>
-                                <thead>
-                                    <tr>
-                                    <th>Herramienta</th>
-                                    <th>Vigencia</th>
-                                    <th>Total testers</th>
-                                    <th>Estatus</th>
-                                    <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                   { listTable.map(list =>
-                                        <tr>
-                                            <th scope="row" className="d-flex data-setting">
-                                                <Media src={list.image}></Media>
-                                                <div className="ml-3">
-                                                    <p className="name-skill">{list.name}</p>
-                                                    <p className="version">{list.version}</p>
-                                                </div>
-                                            </th>
-                                            <td>{list.vigency}</td>
-                                            <td>{list.total}</td>
-                                            <td><div className='active'></div>{list.status}</td>
-                                            <td><Button color="primary" onClick={onDismiss}>Probar</Button></td>
-                                        </tr>
-                                   )}
-                                </tbody>
-                                </Table>
-                        </Col>
-                        </Row>
-                    </TabPane>
-                    <TabPane tabId="2">
-                    <Row>
-                        <Col sm="12">
-                            <p className="font-avenir-medium title">Próximamente</p>
-                            <Table>
-                                <thead>
-                                    <tr>
-                                    <th>Herramienta</th>
-                                    <th>Vigencia</th>
-                                    <th>Total testers</th>
-                                    <th>Estatus</th>
-                                    <th>Notificarme</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                   { listComingSoon.map(list =>
-                                        <tr>
-                                            <th scope="row" className="d-flex data-setting">
-                                                <Media src={list.image}></Media>
-                                                <div className="ml-3">
-                                                    <p className="name-skill">{list.name}</p>
-                                                    <p className="version">{list.version}</p>
-                                                </div>
-                                            </th>
-                                            <td>{list.vigency}</td>
-                                            <td>{list.total}</td>
-                                            <td><div className='inactive'></div>Inactivo</td>
-                                            <td><Button color="primary" onClick={onDismiss}>Apartar lugar</Button></td>
-                                        </tr>
-                                   )}
-                                </tbody>
-                                </Table>
-                        </Col>
-                        </Row>
-                    </TabPane>
-                    </TabContent>
                 </div>
              }
             </ModalBody>
