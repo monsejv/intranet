@@ -14,7 +14,7 @@ export const prototipos = {
                     avaible: '10 días',
                     testers: '150',
                     testersUsed: '22',
-                    status: 'active',
+                    status: 'Activo',
                     link: '/'
                 },
                 {
@@ -24,7 +24,7 @@ export const prototipos = {
                     avaible: '30 días',
                     testers: '200',
                     testersUsed: '87',
-                    status: 'active',
+                    status: 'Activo',
                     link: '/'
                 },
                 {
@@ -34,7 +34,7 @@ export const prototipos = {
                     avaible: '15 días',
                     testers: '150',
                     testersUsed: '48',
-                    status: 'active',
+                    status: 'Activo',
                     link: '/'
                 }]
             },
@@ -47,7 +47,7 @@ export const prototipos = {
                     avaible: '40 días',
                     testers: '50',
                     testersUsed: '27',
-                    status: 'active',
+                    status: 'Activo',
                     link: '/'
                 }]
             },
@@ -60,7 +60,7 @@ export const prototipos = {
                     avaible: '40 días',
                     testers: '50',
                     testersUsed: '27',
-                    status: 'active',
+                    status: 'Activo',
                     link: '/'
                 }]
             }]
@@ -76,7 +76,7 @@ export const prototipos = {
                     avaible: '10 días',
                     testers: '150',
                     testersUsed: '22',
-                    status: 'active',
+                    status: 'Activo',
                     link: '/'
                 },
                 {
@@ -86,7 +86,7 @@ export const prototipos = {
                     avaible: '30 días',
                     testers: '200',
                     testersUsed: '87',
-                    status: 'active',
+                    status: 'Activo',
                     link: '/'
                 },
                 {
@@ -96,7 +96,7 @@ export const prototipos = {
                     avaible: '15 días',
                     testers: '150',
                     testersUsed: '48',
-                    status: 'active',
+                    status: 'Activo',
                     link: '/'
                 }]
             }]
@@ -112,7 +112,7 @@ export const prototipos = {
                     avaible: '10 días',
                     testers: '150',
                     testersUsed: '22',
-                    status: 'active',
+                    status: 'Activo',
                     link: '/'
                 },
                 {
@@ -122,7 +122,7 @@ export const prototipos = {
                     avaible: '30 días',
                     testers: '200',
                     testersUsed: '87',
-                    status: 'active',
+                    status: 'Activo',
                     link: '/'
                 },
                 {
@@ -132,7 +132,7 @@ export const prototipos = {
                     avaible: '15 días',
                     testers: '150',
                     testersUsed: '48',
-                    status: 'active',
+                    status: 'Activo',
                     link: '/'
                 }]
             }]
@@ -148,7 +148,7 @@ export const prototipos = {
                     avaible: '10 días',
                     testers: '150',
                     testersUsed: '22',
-                    status: 'active',
+                    status: 'Activo',
                     link: '/'
                 },
                 {
@@ -158,7 +158,7 @@ export const prototipos = {
                     avaible: '30 días',
                     testers: '200',
                     testersUsed: '87',
-                    status: 'active',
+                    status: 'Activo',
                     link: '/'
                 },
                 {
@@ -168,7 +168,7 @@ export const prototipos = {
                     avaible: '15 días',
                     testers: '150',
                     testersUsed: '48',
-                    status: 'active',
+                    status: 'Activo',
                     link: '/'
                 }]
             }]
