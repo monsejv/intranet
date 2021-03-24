@@ -23,7 +23,7 @@ import classnames from 'classnames';
 
 const TableModal = props => {
 
-    const { modalStatus, fc, className, textAlert, dataModal  } = props
+    const { modalStatus, fc, className, textAlert, dataModal, nested  } = props
 
     const tabsData = dataModal.tabs
     const tools = dataModal.uphands
@@ -36,7 +36,7 @@ const TableModal = props => {
     }
 
     const [statusAlert, setVisible] = useState(false);
-
+   
     const onDismiss = () => setVisible(!statusAlert);
 
     return(    
@@ -111,7 +111,7 @@ const TableModal = props => {
                                                                     }
                                                                     </td>
                                                                 <td><div className={ detail.inactive ? "inactive" : "active"}></div>{detail.status}</td>
-                                                                <td><Button color="primary" onClick={ tools ? onDismiss : false }>{ detail.inactive ? "Apartar lugar" : "Probar"}</Button></td>
+                                                                <td><Button color="primary" onClick={ tools ? onDismiss : nested }>{ detail.inactive ? "Apartar lugar" : "Probar"}</Button></td>
                                                             </tr>
                                                     )}
                                                     </tbody>

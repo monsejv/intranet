@@ -11,9 +11,10 @@ import {
     Button
   } from 'reactstrap';
 
-import { prototipos } from '../../lib/modals';
+import { prototipos, detailPrototype } from '../../lib/modals';
 
 import TableModal from '../TableModal/Index'
+import FlayerModal from '../FlayerModal/Index'
 
 const GeneralCard = props => {
     const { img,
@@ -25,11 +26,23 @@ const GeneralCard = props => {
       }  = props.data
 
     const [modalProt, setModalP] = useState(false);
+    const [nestedModal, setNestedModal] = useState(false);
+    const [closeAll, setCloseAll] = useState(false);
+
     const toggleProto = () => setModalP(!modalProt);
+    const toggleNested = () => {
+      setNestedModal(!nestedModal);
+      setCloseAll(false);
+    }
+    const toggleAll = () => {
+      setNestedModal(!nestedModal);
+      setCloseAll(true);
+    }
 
     return(
       <section>
-          <TableModal modalStatus={modalProt} dataModal={prototipos} fc={toggleProto} className="up-hand"  />
+          <FlayerModal nestedModal={nestedModal} toggleNested={toggleNested} closeAll={closeAll} toggle={toggleProto} toggleAll={toggleAll} dataModal={detailPrototype}  />
+          <TableModal modalStatus={modalProt} dataModal={prototipos} fc={toggleProto} nested={toggleNested} className="up-hand"  />
             <Card className="mb-4 shadow">
                 <CardBody>
                 <CardImg  src={img} className={classImage} alt="Card image cap" />

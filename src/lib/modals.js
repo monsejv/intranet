@@ -1,4 +1,8 @@
-import { SettingHand } from '../assets/Index'
+import { SettingHand, ImgFlayer, Person3, Prototype1, Prototype2 } from '../assets/Index'
+
+
+//Modal with tables <
+
 
 export const prototipos = {
     title: 'Probando prototipos',
@@ -227,5 +231,31 @@ export const herramientas = {
                 inactive: true
             }]
         }]
+    }]
+}
+
+
+//Modal with cards
+
+export const detailPrototype = {
+    organized: 'Citibanamex / Digital Factory',
+    name: 'Onboarding Bank',
+    image: ImgFlayer.default,
+    legend: 'Una experiencia completamente nueva',
+    total: '150',
+    used: '22',
+    createdBy: {
+        photo: Person3.default,
+        name: 'José Sanchez López',
+        ocupation: 'UX Designer'
+    },
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elementum sapien lorem, quis suscipit dolor pulvinar ac. Maecenas mattis arcu maximus, pulvinar magna eget, lacinia odio. Phasellus porttitor, libero a laoreet dictum, ipsum velit venenatis eros, in fringilla neque mi id urna.',
+    prototypes: [{
+        image: Prototype1.default,
+        name: 'Prototype A'
+    },
+    {
+        image: Prototype2.default,
+        name: 'Prototype B'
     }]
 }
