@@ -2,53 +2,79 @@ import React from 'react'
 
 import './style.scss'
 
-import { Modal, ModalHeader, ModalBody, Media, Card, CardBody, CardImg, CardTitle, CardSubtitle, Row, Col } from 'reactstrap'
+import Moment from 'react-moment';
+import 'moment/locale/es';
+
+import { Modal, ModalHeader, ModalBody, Media, Card, CardBody, CardImg, CardTitle, CardSubtitle, Row, Col, CardText, Button } from 'reactstrap'
 
 const FlayerModal = props => {
 
-    const { closeAll, nestedModal, toggleNested, toggle, toggleAll, dataModal } = props
+    const { closeAll, nestedModal, toggleNested, toggle, toggleAll, dataModal, events, courses } = props
 
-    const { organized, name, createdBy, image, legend, total, used, description, prototypes } = dataModal
+    const { organized, name, createdBy, image, legend, total, used, description, prototypes, impartedBy, location, hourStart, hourFinish, totalQuote, date } = dataModal
     return(
         <Modal isOpen={nestedModal} toggle={toggleNested} onClosed={closeAll ? toggle : undefined} className="flayer-modal">
             <div className="d-flex">
                 <Media src={image} ></Media>
-                <div>
+                <div className="paddings">
                 <ModalHeader toggle={toggleNested} className="mt-4">
-                    ORGANIZADO POR <br/> <span className="organized">{organized}</span>
+                    ORGANIZADO POR <br/> { organized === 'prototype' ? <span className="logo prototype"></span> : <span className="organized"> {organized} </span>}
                 </ModalHeader>
                 <ModalBody>
-                    <p className="title">Nombre del prototipo</p>
+                    <p className="title">{ events ? 'EVENTO' : courses ? 'CURSO' : 'Nombre del prototipo' }</p>
                     <h1 className="name-flayer">{name}</h1>
                     <p className="legend">{legend}</p>
-                    <p className="total">Total de testers: {used}/{total}</p>
+                    <p className="total">{ events 
+                    ? `Cupo máximo: ${totalQuote} personas`
+                    : `Total de testers: ${used}/${total}`
+                    } </p>
                     <div className="d-flex mt-4 mb-4">
-                        <Media src={createdBy.photo} className="photo-by"></Media>
+                        <Media src={ events || courses ? `${impartedBy.photo}` : `${createdBy.photo}`} className="photo-by"></Media>
                         <div className="data-created-by">
-                            <p class="title">Creado por</p>
-                            <h5>{createdBy.name}</h5>  
-                            <span>{createdBy.ocupation}</span>
+                            <p class="title">{events || courses ? "Impartido por" : "Creado por"}</p>
+                            <h5>{ events || courses ? `${impartedBy.name}` : `${createdBy.name}`}</h5>  
+                            <span>{ events || courses ? `${impartedBy.ocupation}` : `${createdBy.ocupation}`}</span>
                         </div>
                     </div>
-                    <p className="title">Objetivo</p>
+                    <p className="title">{events ? "Acerca de este evento" : courses ? "Acerca de este curso" : "Objetivo"}</p>
                     <p className="description mb-5">{description}</p>
-                    <p className="title">¿En dónde probar el prototipo?</p>
-                    <p className="description mt-2">Haz clic sobre los prototipos para empezar a probar.</p>
+                    
                     { prototypes && 
-                        <Row>
-                            {prototypes.map(list => 
-                                <Col sm={6}>
-                                    <Card onClick={toggleAll}>
-                                        <CardImg top width="100%" src={list.image} alt="Card image cap" />
-                                        <CardBody className="text-center mt-3">
-                                        <CardTitle tag="h5">{name}</CardTitle>
-                                        <CardSubtitle tag="h6" className="mb-2 text-muted">{list.name}</CardSubtitle>
-                                        </CardBody>
-                                    </Card>
-                                </Col>
-                            )}
-                        </Row>
+                        <div>
+                            <p className="title">¿En dónde probar el prototipo?</p>
+                            <p className="description mt-2">Haz clic sobre los prototipos para empezar a probar.</p>
+                            <Row>
+                                {prototypes.map(list => 
+                                    <Col sm={6}>
+                                        <Card onClick={toggleAll}>
+                                            <CardImg top width="100%" src={list.image} alt="Card image cap" />
+                                            <CardBody className="text-center mt-3">
+                                            <CardTitle tag="h5">{name}</CardTitle>
+                                            <CardSubtitle tag="h6" className="mb-2 text-muted">{list.name}</CardSubtitle>
+                                            </CardBody>
+                                        </Card>
+                                    </Col>
+                                )}
+                            </Row>
+                        </div>
                     }
+
+                    <Row>
+                        <Col sm={6}>
+                            <CardText className="title mb-2">¿Cuándo?</CardText>
+                            <CardText>
+                                <Moment format="dddd DD [de] MMMM[, ]YYYY" locale="es" className="text-capitalize">{date}</Moment> 
+                                <br/> de {hourStart} a {hourFinish} hrs.
+                            </CardText>
+                            <a href="#" className="icon calendar">Añadir al calendario</a>
+                        </Col>
+                        <Col sm={6}>
+                            <CardText className="title mb-2">¿En dónde?</CardText>
+                            <CardText>{location}</CardText>
+                            <a href="#" className="icon gps">Ver ubicación</a>
+                        </Col>
+                    </Row>
+                    <Button color="primary" className="mt-5" onClick={toggleAll}>Apartar lugar</Button>
                 </ModalBody>
                 </div>
             </div>

@@ -25,12 +25,12 @@ export const courseList = {
     courses: [{
         title: 'Gestión de equipos',
         image: Course1.default,
-        completed: '70'
+        completed: '60'
     },
     {
         title: 'Scrum Agile',
         image: Course2.default,
-        completed: '30'
+        completed: '20'
     },
     {
         title: 'Inteligencia emocional',

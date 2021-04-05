@@ -31,13 +31,14 @@ import api from '../lib/api'
 const Home = () => {
     const menuNews = {
         cardTitle: 'Últimas noticias',
-        link: '/',
+        news: true,
+        link: '/noticias',
         textLink: 'Ver todas'
     }
 
     const menuEvents = {
         cardTitle: 'Próximos eventos',
-        link: '/',
+        link: '#',
         textLink: 'Ver todos'
     }
 

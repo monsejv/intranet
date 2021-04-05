@@ -1,6 +1,10 @@
 .flayer-modal{
     font-family: 'AvenirLTStd-Medium';
     background: #f9fbfd;
+    max-width: 1072px!important;
+    .paddings{
+        padding: 15px;
+    }
     .modal-header{
         margin-top: 0px!important;
         padding-left: 30px;
@@ -8,9 +12,20 @@
             font-size: 12px!important;
             font-weight: 900!important;
             font-family: 'AvenirLTStd-Heavy'!important;
+            color: #5f5f5f!important;
             .organized{
                 font-size: 16px;
                 font-family: 'AvenirLTStd-Medium';
+            }
+            .logo{
+                min-width: 180px;
+                height: 50px;
+                background-repeat: no-repeat;
+                background-size: contain;
+                display: block;
+                &.prototype{
+                    background-image: url('../../assets/images/logo-prototype.svg');
+                }
             }
         }
     }
@@ -24,13 +39,16 @@
             font-family: 'AvenirLTStd-Heavy';
             text-transform: uppercase;
             margin: 0;
+            color: #5f5f5f;
         }
         .legend{
             font-size: 18px;
+            color: #282d30;
         }
         .name-flayer{
             font-size: 36px;
-            font-weight: 500;   
+            font-weight: 500; 
+            color: #000;  
         }
         .photo-by{
             width: 60px;
@@ -43,6 +61,7 @@
                 font-size: 18px;
                 font-weight: 500;
                 margin-bottom: 0px;
+                color: #000;
             }
             span{
                 font-size: 12px;
@@ -61,6 +80,22 @@
             border-radius: 12px;
             box-shadow: 0px 6px 18px 0px rgba(209, 213, 223, 0.5);
             cursor: pointer;
+        }
+        .icon{
+            background-repeat: no-repeat;
+            background-position: left;
+            padding-left: 25px;
+            vertical-align: middle;
+            font-family: 'AvenirLTStd-Heavy';
+            font-weight: 900;
+            &.gps{
+                background-image: url('../../assets/images/ico-gps.svg');
+                background-size: 15px;
+            }
+            &.calendar{
+                background-image: url('../../assets/images/ico-calendar.svg');
+                background-size: 20px;
+            }
         }
     }
 }

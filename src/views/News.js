@@ -9,7 +9,7 @@ import { Form,
         Row,
         Col} from 'reactstrap'
 
-const Index = () => {
+const News = () => {
     return(
         <Container>
             <Row>
@@ -31,4 +31,4 @@ const Index = () => {
     )
 }
 
-export default Index
+export default News

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Home from './views/Home'
-import Index from './views/Index'
+import News from './views/News'
 
 
 
@@ -17,14 +17,14 @@ function App() {
     <Switch>  
       <Route
         path='/'
-        component={Index}
+        component={Home}
         exact
       />
     </Switch>
     <Switch>  
       <Route
-        path='/home'
-        component={Home}
+        path='/noticias'
+        component={News}
         exact
       />
     </Switch>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { CardImg,
         Card,
         CardBody,
@@ -8,9 +8,13 @@ import { CardImg,
 
 import { Link } from 'react-router-dom'
 
+import CardsModal from '../CardsModal/Index'
+import FlayerModal from '../FlayerModal/Index'
+
+import { eventsList } from '../../lib/events'
+
 import Moment from 'react-moment';
 import 'moment/locale/es';
-
 
 const EventsCard = props => {
     const { title, 
@@ -21,26 +25,50 @@ const EventsCard = props => {
             cover } = props.cardData
 
     const { cardTitle, 
+            news,
             link,
             textLink } = props.menu
+    
+    const [modal, setModal] = useState(false);
+    const [nestedModal, setNestedModal] = useState(false);
+    const [closeAll, setCloseAll] = useState(false);
+    
 
+
+    const toggle = () => setModal(!modal);
+    const toggleNested = () => {
+        setNestedModal(!nestedModal);
+        setCloseAll(false);
+      }
+      const toggleAll = () => {
+        setNestedModal(!nestedModal);
+        setCloseAll(true);
+      }
+
+    const [index, setIndex] = useState(0)
+    
     return(
-        <Card className="mb-4 shadow">
-            <CardBody>
-                <div className="d-flex justify-content-between">
-                    <CardTitle>{cardTitle}</CardTitle>
-                    <Link to={link} className="font-avenir-heavy">{textLink}</Link>
-                </div>
-                <div className="d-flex card-news">
-                <CardImg src={cover.url }/>
-                <div className="ml-2">
-                    <CardTitle>{title}</CardTitle>
-                    <CardSubtitle>{subtitle}</CardSubtitle>
-                    <CardText>Fecha y hora: <Moment format="DD [de] MMMM" locale="es">{date}</Moment> {startTime && startTime.slice(0, -3)} hrs</CardText>
-                </div>
-                </div>
-            </CardBody>
-        </Card>
+        <section>
+            <FlayerModal nestedModal={nestedModal} toggleNested={toggleNested} closeAll={closeAll} toggle={toggle} toggleAll={toggleAll} dataModal={eventsList.list[index]} events={true} />
+            <CardsModal toggle={toggle} modal={modal} nested={toggleNested}
+                        dataModal={eventsList} className="events" />
+            <Card className="mb-4 shadow">
+                <CardBody>
+                    <div className="d-flex justify-content-between">
+                        <CardTitle>{cardTitle}</CardTitle>
+                        <Link to={news ? link : '#'} className="font-avenir-heavy" onClick={ !news ? toggle : false}>{textLink}</Link>
+                    </div>
+                    <div className="d-flex card-news">
+                    <CardImg src={cover.url }/>
+                    <div className="ml-2">
+                        <CardTitle>{title}</CardTitle>
+                        <CardSubtitle>{subtitle}</CardSubtitle>
+                        <CardText>Fecha y hora: <Moment format="DD [de] MMMM" locale="es">{date}</Moment> {startTime && startTime.slice(0, -3)} hrs</CardText>
+                    </div>
+                    </div>
+                </CardBody>
+            </Card>
+        </section>
     )
 }
 

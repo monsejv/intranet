@@ -12,9 +12,13 @@ import { IconBirthday} from '../../assets/Index'
 
 import MemberCircle from '../MemberCircle/Index'
 import WidgetsModal from '../WidgetsModal/Index'
+import FlayerModal from '../FlayerModal/Index'
+import CardsModal from '../CardsModal/Index'
 
 import { birthdayCalendar } from '../../lib/birthdaysOfMonth'
 import { rebootersOfMonth } from '../../lib/rebootersOfMonth'
+
+import { coursesList } from '../../lib/courses'
 
 const SecondaryCard = props => {
     const { title,
@@ -30,11 +34,30 @@ const SecondaryCard = props => {
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
 
+    const [modalCards, setCards] = useState(false);
+    const [nestedModal, setNestedModal] = useState(false);
+    const [closeAll, setCloseAll] = useState(false);
+    
+
+
+    const toggleCards = () => setCards(!modalCards);
+    const toggleNested = () => {
+        setNestedModal(!nestedModal);
+        setCloseAll(false);
+      }
+      const toggleAll = () => {
+        setNestedModal(!nestedModal);
+        setCloseAll(true);
+      }
+
     return(
         <section>
             <WidgetsModal toggle={toggle} modal={modal} 
                             dataModal={ birthdays ? birthdayCalendar : rebootersOfMonth } 
                             className={ birthdays ? "birthday-bg" : "rebooters-bg"} ></WidgetsModal>
+            <FlayerModal nestedModal={nestedModal} toggleNested={toggleNested} closeAll={closeAll} toggle={toggleCards} toggleAll={toggleAll} dataModal={coursesList.list[0]} courses={true} />
+            <CardsModal toggle={toggleCards} modal={modalCards} nested={toggleNested}
+                        dataModal={coursesList} className="courses" />
             <Card className="mb-4 shadow">
                 <CardBody onClick={ birthdays && toggle }>
                     { birthdays  ?
@@ -45,7 +68,7 @@ const SecondaryCard = props => {
 
                         : <div className="d-flex justify-content-between">
                             <CardTitle>{title}</CardTitle>
-                            <Link to="#" className="font-avenir-heavy" onClick={toggle}>{textLink}</Link>
+                            <Link to="#" className="font-avenir-heavy" onClick={ courses ? toggleCards : toggle}>{textLink}</Link>
                         </div>
                     } 
                     <div className={classCelebration}></div>

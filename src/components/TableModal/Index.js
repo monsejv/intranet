@@ -21,6 +21,7 @@ import GeneralAlert from '../GeneralAlert/Index'
 
 import classnames from 'classnames';
 
+
 const TableModal = props => {
 
     const { modalStatus, fc, className, textAlert, dataModal, nested  } = props

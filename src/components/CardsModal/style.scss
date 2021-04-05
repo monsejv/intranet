@@ -1,0 +1,81 @@
+.cards{
+    max-width: 1072px;
+    box-shadow: 0px 18px 40px -4px rgba(0, 0, 0, 0.33);
+    .modal-content{
+        background-repeat: no-repeat;
+        background-size: contain;
+        min-height: 856px;
+        .modal-header{
+            padding: 50px 30px 0px 30px;
+            .modal-title{
+                font-size: 38px;
+            }
+        }
+        .modal-body{
+            overflow: auto;
+        }
+        .card{
+            border-radius: 10px;
+            box-shadow: 0px 2px 6px 0px rgba(47, 83, 151, 0.1);
+            padding: 20px 22px;    
+            height: 288px; 
+            margin-bottom: 30px;
+            cursor: pointer;
+            .card-title{
+                font-family: 'AvenirLTStd-Medium';
+                font-size: 18px;
+                font-weight: 500;
+            }
+            .card-img-top{
+                border-radius: 10px;
+                height: 144px;
+            }
+            .card-subtitle{
+                font-family: 'AvenirLTStd-Roman';
+                font-size: 14px;
+                font-weight: normal;
+            }
+            .card-text{
+                font-size: 16px;
+                font-weight: 500;
+                font-family: 'AvenirLTStd-Medium';
+                color: #f89521;
+                margin-bottom: 5px;
+            }
+            .text-success{
+                font-weight: 900;
+                color: #0f901e;
+            }
+        }
+    }
+}
+
+
+.events{
+    .modal-content{
+        background-image: url('../../assets/images/bg-events.jpg');
+    }
+}
+
+.courses{
+    .modal-content{
+        background-image: url('../../assets/images/bg-class.jpg');
+    }
+    .progress{
+        height: 12px;
+        background: #f6f9fc;
+        width: 100%;
+        border-radius: 8px;
+        .progress-bar{
+            background: linear-gradient(-225deg, rgb(248, 149, 33) 0%, rgb(255, 218, 110) 100%)!important;
+            height: 12px;
+            border-radius: 8px;
+        }
+    }
+    h1{
+        font-family: 'AvenirLTStd-Roman';
+        font-size: 28px;
+        font-weight: normal;
+        color: #000000;
+    }
+}
