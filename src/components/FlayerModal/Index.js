@@ -7,11 +7,13 @@ import 'moment/locale/es';
 
 import { Modal, ModalHeader, ModalBody, Media, Card, CardBody, CardImg, CardTitle, CardSubtitle, Row, Col, CardText, Button } from 'reactstrap'
 
+import {Link} from 'react-router-dom'
+
 const FlayerModal = props => {
 
     const { closeAll, nestedModal, toggleNested, toggle, toggleAll, dataModal, events, courses } = props
 
-    const { organized, name, createdBy, image, legend, total, used, description, prototypes, impartedBy, location, hourStart, hourFinish, totalQuote, date } = dataModal
+    const { organized, days, name, createdBy, image, legend, total, used, description, prototypes, impartedBy, location, hourStart, hourFinish, totalQuote, date } = dataModal
     return(
         <Modal isOpen={nestedModal} toggle={toggleNested} onClosed={closeAll ? toggle : undefined} className="flayer-modal">
             <div className="d-flex">
@@ -24,7 +26,7 @@ const FlayerModal = props => {
                     <p className="title">{ events ? 'EVENTO' : courses ? 'CURSO' : 'Nombre del prototipo' }</p>
                     <h1 className="name-flayer">{name}</h1>
                     <p className="legend">{legend}</p>
-                    <p className="total">{ events 
+                    <p className="total">{ events || courses
                     ? `Cupo máximo: ${totalQuote} personas`
                     : `Total de testers: ${used}/${total}`
                     } </p>
@@ -37,10 +39,10 @@ const FlayerModal = props => {
                         </div>
                     </div>
                     <p className="title">{events ? "Acerca de este evento" : courses ? "Acerca de este curso" : "Objetivo"}</p>
-                    <p className="description mb-5">{description}</p>
-                    
+                    <p className="description">{description}</p>
+                    { courses && <Link to="#">Ver temario</Link>}
                     { prototypes && 
-                        <div>
+                        <div className="mt-5">
                             <p className="title">¿En dónde probar el prototipo?</p>
                             <p className="description mt-2">Haz clic sobre los prototipos para empezar a probar.</p>
                             <Row>
@@ -59,22 +61,30 @@ const FlayerModal = props => {
                         </div>
                     }
 
-                    <Row>
+                    <Row className="mt-3">
                         <Col sm={6}>
-                            <CardText className="title mb-2">¿Cuándo?</CardText>
+                            <CardText className="title mb-2">{events ? '¿Cuándo?' : '¿Cuándo inicia?'}</CardText>
                             <CardText>
                                 <Moment format="dddd DD [de] MMMM[, ]YYYY" locale="es" className="text-capitalize">{date}</Moment> 
-                                <br/> de {hourStart} a {hourFinish} hrs.
+                                { events &&  <span><br/>de {hourStart} a {hourFinish} hrs.</span>}
                             </CardText>
+                            {courses && 
+                                <div className="mb-3">
+                                    <CardText className="title mb-2">¿Cada cuándo?</CardText>
+                                    <CardText>{days} <br/> de {hourStart} a {hourFinish} hrs.</CardText>
+                                </div>
+                            }
                             <a href="#" className="icon calendar">Añadir al calendario</a>
                         </Col>
                         <Col sm={6}>
                             <CardText className="title mb-2">¿En dónde?</CardText>
-                            <CardText>{location}</CardText>
-                            <a href="#" className="icon gps">Ver ubicación</a>
+                            {location === 'En línea' 
+                                ? <CardText>{location} <br/> Una vez que te inscribas se enviará la liga por correo</CardText>
+                                : <div><CardText>{location}</CardText><a href="#" className="icon gps">Ver ubicación</a></div>
+                            }
                         </Col>
                     </Row>
-                    <Button color="primary" className="mt-5" onClick={toggleAll}>Apartar lugar</Button>
+                    <Button color="primary" className="mt-5" onClick={toggleAll}>{ events ? 'Apartar lugar' : 'Inscribirme' }</Button>
                 </ModalBody>
                 </div>
             </div>

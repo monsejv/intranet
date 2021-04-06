@@ -14,11 +14,13 @@ import MemberCircle from '../MemberCircle/Index'
 import WidgetsModal from '../WidgetsModal/Index'
 import FlayerModal from '../FlayerModal/Index'
 import CardsModal from '../CardsModal/Index'
+import GoalsModal from '../GoalsModal/Index'
 
 import { birthdayCalendar } from '../../lib/birthdaysOfMonth'
 import { rebootersOfMonth } from '../../lib/rebootersOfMonth'
 
 import { coursesList } from '../../lib/courses'
+
 
 const SecondaryCard = props => {
     const { title,
@@ -37,9 +39,9 @@ const SecondaryCard = props => {
     const [modalCards, setCards] = useState(false);
     const [nestedModal, setNestedModal] = useState(false);
     const [closeAll, setCloseAll] = useState(false);
+    const [modalGoals, setGoals] = useState(false);
     
-
-
+    const toggleGoals = () => setGoals(!modalGoals);
     const toggleCards = () => setCards(!modalCards);
     const toggleNested = () => {
         setNestedModal(!nestedModal);
@@ -58,6 +60,7 @@ const SecondaryCard = props => {
             <FlayerModal nestedModal={nestedModal} toggleNested={toggleNested} closeAll={closeAll} toggle={toggleCards} toggleAll={toggleAll} dataModal={coursesList.list[0]} courses={true} />
             <CardsModal toggle={toggleCards} modal={modalCards} nested={toggleNested}
                         dataModal={coursesList} className="courses" />
+            <GoalsModal toggle={toggleGoals} modal={modalGoals} />
             <Card className="mb-4 shadow">
                 <CardBody onClick={ birthdays && toggle }>
                     { birthdays  ?
@@ -68,7 +71,7 @@ const SecondaryCard = props => {
 
                         : <div className="d-flex justify-content-between">
                             <CardTitle>{title}</CardTitle>
-                            <Link to="#" className="font-avenir-heavy" onClick={ courses ? toggleCards : toggle}>{textLink}</Link>
+                            <Link to="#" className="font-avenir-heavy" onClick={ courses ? toggleCards : goals ? toggleGoals : toggle}>{textLink}</Link>
                         </div>
                     } 
                     <div className={classCelebration}></div>

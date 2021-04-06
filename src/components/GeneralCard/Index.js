@@ -48,7 +48,7 @@ const GeneralCard = props => {
                 <CardImg  src={img} className={classImage} alt="Card image cap" />
                 <CardTitle tag="h5" className="mt-3">{title}</CardTitle>
                 <CardText>{text}</CardText>
-                <Button color="primary" className="next" onClick={toggleProto}>{textButton}</Button>
+                <Button color="primary" className="next" onClick={ title === '¡Probando prototipos!' ? toggleProto : false}>{textButton}</Button>
                 </CardBody>
             </Card>
       </section>

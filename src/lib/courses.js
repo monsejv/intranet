@@ -64,7 +64,7 @@ export const coursesList = {
     }],
     inProgress: [{
         name: 'Gestión de equipos',
-        cover: Course1.default,
+        cover: EventCover.default,
         completed: '60',
         impartedBy: {
             name: 'Verónica García Bernal',
@@ -74,7 +74,7 @@ export const coursesList = {
     },
     {
         name: 'Scrum Agile',
-        cover: Course2.default,
+        cover: EventCover.default,
         completed: '20',
         impartedBy: {
             name: 'Javier González Salazar',
@@ -84,7 +84,7 @@ export const coursesList = {
     },
     {
         name: 'Inteligencia emocional',
-        cover: Course3.default,
+        cover: EventCover.default,
         completed: '100',
         impartedBy: {
             name: 'Gabriel Díaz Flores',

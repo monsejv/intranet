@@ -1,0 +1,145 @@
+.goals{
+    max-width: 1072px!important;
+    .modal-header{
+        padding: 20px 30px;
+    }
+    .modal-body{
+        overflow: hidden;
+        .nav{
+            width: 100%;
+            border-bottom: none;
+            .nav-link{
+                height: 72px;
+                width: 90%;
+                border-radius: 10px;
+                box-shadow: 0px 6px 18px 0px rgba(209, 213, 223, 0.45);
+                margin: 6px 0px;
+                font-family: 'AvenirLTStd-Heavy';
+                font-size: 18px;
+                font-weight: 900;
+                color: #fff;
+                line-height: 55px;
+                z-index: 2;
+                position: relative;
+                overflow: hidden;
+                &.active{
+                    width: 100%;
+                    border-bottom: none;
+                }
+                .logo-goal{
+                    background-position: center bottom !important;
+                    background-repeat: no-repeat !important;
+                    display: block;
+                    width: 84px;
+                    height: 84px;
+                    position: absolute;
+                    right: -10px;
+                    background-size: 69px !important;
+                    bottom: -6px;
+                    z-index: 1;
+                    border-radius: 50%;
+                    background: #ffffff24;
+                }
+            }
+        }
+        .tab-pane{
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .general{
+            background: linear-gradient(-225deg, rgb(248, 149, 33) 0%, rgb(255, 218, 110) 100%)!important;
+                .logo-goal{
+                background-image: url('../../assets/images/General.svg')!important;
+            }
+        }
+        .proyects{
+            background: linear-gradient(-90deg, rgb(73, 192, 224) 0%, rgb(0, 112, 185) 100%)!important;
+                .logo-goal{
+                background-image: url('../../assets/images/Proyectos.svg')!important;
+            }
+        }
+        .productivity{
+            background: linear-gradient(-90deg, rgb(0, 167, 158) 0%, rgb(37, 87, 85) 100%)!important;
+                .logo-goal{
+                background-image: url('../../assets/images/Productividad.svg')!important;
+            }
+        }
+        .courses{
+            background: linear-gradient(-225deg, rgb(0, 167, 158) 0%, rgb(150, 248, 242) 100%)!important;
+                .logo-goal{
+                background-image: url('../../assets/images/Cursos.svg')!important;
+            }
+        }
+        .okrs{
+            background: linear-gradient(-90deg, rgb(248, 141, 150) 0%, rgb(232, 61, 70) 100%)!important;
+                .logo-goal{
+                background-image: url('../../assets/images/OKRS.svg')!important;
+            }
+        }
+        .path{
+            background: linear-gradient(-90deg, rgb(255, 208, 100) 0%, rgb(255, 132, 0) 100%)!important;
+                .logo-goal{
+                background-image: url('../../assets/images/ico-carrera.svg')!important;
+            }
+        }
+        .events{
+            background: linear-gradient(-225deg, rgb(146, 39, 143) 0%, rgb(252, 163, 255) 100%)!important;
+                .logo-goal{
+                background-image: url('../../assets/images/Eventos.svg')!important;
+            }
+        }
+        .volunteering{
+            background: linear-gradient(-90deg, rgb(239, 65, 54) 0%, rgb(170, 57, 51) 100%)!important;
+                .logo-goal{
+                background-image: url('../../assets/images/Voluntariados.svg')!important;
+            }
+        }
+        .card{
+            border-radius: 10px;
+            min-height: 183px;
+            margin: 15px 0px;
+            .card-img-top{
+                width: 60px;
+                height: 60px;
+                margin: auto;
+            }
+            .card-body{
+                .card-title{
+                    font-size: 14px;
+                }
+                .card-subtitle{
+                    font-size: 12px;
+                    font-weight: normal;
+                    font-family: 'AvenirLTStd-Roman';
+                    color: #282d30;
+                }
+                .card-text{
+                    font-size: 10px;
+                    font-family: 'AvenirLTStd-Roman';
+                    color: #9f9f9f;
+                }
+                .icon-block{
+                    display: block;
+                    height: 20px;
+                    width: 20px;
+                    background-image: url('../../assets/images/ico-lock.svg');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    margin: auto;
+                }
+                .progress{
+                    height: 8px;
+                    background: #f6f9fc;
+                    width: 100%;
+                    border-radius: 4px;
+                    .progress-bar{
+                        background: linear-gradient(-225deg, rgb(248, 149, 33) 0%, rgb(255, 218, 110) 100%)!important;
+                        height: 8px;
+                        border-radius: 4px;
+                    }
+                }
+            }
+        }
+    }
+}
+
