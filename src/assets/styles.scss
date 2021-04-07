@@ -93,6 +93,18 @@ body {
     }
 }
 
+.navbar{
+    box-shadow: 0px 2px 4px 0px rgba(190, 190, 190, 0.5);
+    height: 72px;   
+    .search{
+        background-image: url('../assets/images/icon-search-gray.svg');
+        background-position: right center;
+        background-size: 20px;
+        background-repeat: no-repeat;
+        padding-right: 30px;
+    }
+}
+
 //Apps
 
 .apps-wrapper{
