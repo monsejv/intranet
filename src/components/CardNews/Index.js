@@ -14,7 +14,7 @@ const CardNews = props => {
     const {cover, title, description, author, createdAt, flag } = props.dataNew
 
     return(
-        <Card horizontal className={className}>
+        <Card horizontal className={'card-news ' + className}>
             <CardBody className="d-flex">
                 <Media src={cover} alt="Card image cap" />
                 <div>
