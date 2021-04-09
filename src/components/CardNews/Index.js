@@ -2,6 +2,8 @@ import React from 'react'
 
 import { Card, Media, CardBody, CardTitle, CardSubtitle, CardText, Button }  from 'reactstrap'
 
+import { Link } from 'react-router-dom'
+
 
 import Moment from 'react-moment';
 import 'moment/locale/es';
@@ -16,12 +18,12 @@ const CardNews = props => {
     return(
         <Card horizontal className={'card-news ' + className}>
             <CardBody className="d-flex">
-                <Media src={cover} alt="Card image cap" />
+                <Media src={cover} alt="Card image cap" className="mr-3" />
                 <div>
-                    <Button color="primary" className="text-capitalize">{author.company}</Button>
-                    <CardTitle tag="h5">{title}</CardTitle>
+                    <Link to={{ pathname: '/blog', state: { data: props.dataNew } }} className={ "btn btn-primary text-capitalize mb-2 " + author.company}>{author.company}</Link>
+                    <CardTitle tag="h5" className="mb-2">{title}</CardTitle>
                     { flag === 'recent' &&
-                        <CardSubtitle tag="h6" className="mb-2 text-muted">{description}</CardSubtitle>
+                        <CardSubtitle tag="h6" className="mb-2">{description}</CardSubtitle>
                     }
                     <CardText>{author.name}</CardText>
                     {

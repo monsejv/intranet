@@ -1,4 +1,4 @@
-import { EventCover, Person1, CoursesCoverModal, Course1, Course2, Course3 } from '../assets/Index'
+import { EventCover, Person1, CoursesCoverModal } from '../assets/Index'
 
 export const coursesList = {
     courses: true,

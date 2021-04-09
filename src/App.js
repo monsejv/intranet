@@ -2,6 +2,7 @@ import React from 'react'
 
 import Home from './views/Home'
 import News from './views/News'
+import Blog from './views/Blog'
 
 
 
@@ -25,6 +26,13 @@ function App() {
       <Route
         path='/noticias'
         component={News}
+        exact
+      />
+    </Switch>
+    <Switch>  
+      <Route
+        path='/blog'
+        component={Blog}
         exact
       />
     </Switch>

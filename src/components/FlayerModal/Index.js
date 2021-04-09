@@ -20,7 +20,7 @@ const FlayerModal = props => {
                 <Media src={image} ></Media>
                 <div className="paddings">
                 <ModalHeader toggle={toggleNested} className="mt-4">
-                    ORGANIZADO POR <br/> { organized === 'prototype' ? <span className="logo prototype"></span> : <span className="organized"> {organized} </span>}
+                    ORGANIZADO POR <br/> { organized === 'prototype' ? <span className="logo prototype"></span> : <> {organized} </>}
                 </ModalHeader>
                 <ModalBody>
                     <p className="title">{ events ? 'EVENTO' : courses ? 'CURSO' : 'Nombre del prototipo' }</p>
@@ -80,7 +80,7 @@ const FlayerModal = props => {
                             <CardText className="title mb-2">¿En dónde?</CardText>
                             {location === 'En línea' 
                                 ? <CardText>{location} <br/> Una vez que te inscribas se enviará la liga por correo</CardText>
-                                : <div><CardText>{location}</CardText><a href="#" className="icon gps">Ver ubicación</a></div>
+                                : <><CardText>{location}</CardText><a href="#" className="icon gps">Ver ubicación</a></>
                             }
                         </Col>
                     </Row>

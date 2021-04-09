@@ -20,7 +20,7 @@ const UploadFiles = props => {
     const toggle = () => setModal(!modal);
 
     return(
-        <main>
+        <>
             <GeneralModal modalStatus={modal} files={true} fc={toggle} className="upload"  />
             <Row>
                 <Col sm="12">
@@ -49,7 +49,7 @@ const UploadFiles = props => {
                 </Card>
                 </Col>
             </Row>
-        </main>
+        </>
     )
 }
 

@@ -1,42 +1,22 @@
 import React from 'react'
 
-import { Nav,
-        NavItem,
-        NavLink,
-        Container,
-        NavbarBrand,
-        Media,
-        NavbarText,
+import { Container,
         Row,
-        Col,
-        Navbar} from 'reactstrap'
-
-import { Logo } from "../assets/Index";
+        Col } from 'reactstrap'
 
 import CardNews from '../components/CardNews/Index';
+import GeneralNavBar from '../components/GeneralNavBar/Index'
 
 import { listNews } from '../lib/news'
 
-const News = () => {
+import {Link} from 'react-router-dom'
 
-    const menu = ['Últimas noticias', 'Academy', 'Illud', 'Machina', 'Nova', 'Precision', 'Prototype']
+const News = () => {
     return(
-        <main>
-            <Navbar color="light" light expand="md">
-                <NavbarBrand href="/">
-                    <Media src={Logo.default} width="180px" height="50px"></Media>
-                </NavbarBrand>
-                <Nav className="justify-content-end w-100">
-                    { menu.map(list =>
-                        <NavItem>
-                            <NavLink href="#">{list}</NavLink>
-                        </NavItem>
-                    )}
-                </Nav>
-                <NavbarText className="search ml-5">Buscar</NavbarText>
-            </Navbar> 
+        <>
+            <GeneralNavBar />
             <Container>
-                <p>Dashboard // <b>Últimas noticias</b></p>
+                <p className="pt-3 new-nav"><Link to="/">Dashboard // </Link><b>Últimas noticias</b></p>
                 <Row>
                     { listNews.map(list => 
                         { return list.flag === 'recent' &&
@@ -46,7 +26,7 @@ const News = () => {
                         } 
                     )}
                 </Row>
-                <h3 className="mt-4 mb-4">Más vistas</h3>
+                <h3 className="mt-4 mb-4 new-title">Más vistas</h3>
                 <Row>
                     { listNews.map(list => 
                         { return list.flag === 'popular' &&
@@ -56,7 +36,7 @@ const News = () => {
                         }
                     )}
                 </Row>
-                <h3 className="mt-4 mb-4">Todas las noticias</h3>
+                <h3 className="mt-4 mb-4 new-title">Todas las noticias</h3>
                 <Row>
                     { listNews.map(list => 
                             { return list.flag === '' &&
@@ -67,7 +47,7 @@ const News = () => {
                     )}
                 </Row>
             </Container>
-        </main>
+        </>
     )
 }
 

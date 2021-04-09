@@ -25,7 +25,6 @@ import './style.scss'
 import GeneralAlert from '../GeneralAlert/Index'
 
 import { birthdayCalendar } from '../../lib/birthdaysOfMonth'
-import { userData } from '../../lib/userData'
 
 const WidgetsModal = props => {
 
@@ -73,11 +72,12 @@ const WidgetsModal = props => {
 
     const onChange = (event) => {
         setText(event.target.value)
-        let filteredMedicine = list.filter((index) => {
-            if (index.name.toString().toLowerCase().includes(search)) 
+        let dataValue = event.target.value;
+        let filteredRebooters = list.filter((index) => {
+            if (index.name.toString().toLowerCase().includes(dataValue.toLowerCase())) 
             return index;
         })
-        setList(filteredMedicine)
+        setList(filteredRebooters)
         if (event.target.value === '') setText(null)
     }
 
@@ -86,10 +86,10 @@ const WidgetsModal = props => {
             <GeneralAlert visible={statusAlert} text={textAlert} fc={showAlert} />     
             <ModalHeader toggle={toggle}>
                 { directory &&
-                    <div>
+                    <>
                         Directorio <br/>
                         <span>{sede} / {nameProject}</span> 
-                    </div>
+                    </>
                 } 
                 {
                     birthday &&
@@ -97,7 +97,7 @@ const WidgetsModal = props => {
                 }
                 {
                     rebooters && 
-                    <div><span className={'return ' + addRebooter} onClick={toggleReboot}></span>"Rebooters del mes"</div> 
+                    <><span className={'return ' + addRebooter} onClick={toggleReboot}></span>"Rebooters del mes"</> 
                 }
             </ModalHeader>
             <ModalBody>
@@ -118,24 +118,24 @@ const WidgetsModal = props => {
                                         <CardSubtitle tag="h6" className="mb-2 text-muted">{list.ocupation}</CardSubtitle>
                                         {
                                             directory &&
-                                            <div>
+                                            <>
                                                 <a href={'mailto:'+ list.email} target="_blank"><CardText>{list.email}</CardText></a>
                                                 <a href={'tel:'+ list.phone} target="_blank"><CardText>{list.phone}</CardText></a>
-                                            </div>
+                                            </>
                                         }
                                         {
                                             birthday &&
-                                            <div>
+                                            <>
                                                 <CardText className="text-capital">{list.company}</CardText>
                                                 <CardText>{list.birthday}</CardText>
-                                            </div>
+                                            </>
                                         }
                                         {
                                             rebooters &&
-                                            <div>
+                                            <>
                                                 <CardText className="text-capital">{list.company}</CardText>
                                                 <CardText>{list.votes} votos</CardText>
-                                            </div>
+                                            </>
                                         }
                                     </CardBody>
                                     { rebooters && index < 3 

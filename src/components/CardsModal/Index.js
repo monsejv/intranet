@@ -1,10 +1,9 @@
-import React, { useState, setState } from 'react'
+import React from 'react'
 
 import {
     Modal,
     ModalHeader,
     ModalBody,
-    Button,
     Card,
     CardImg,
     CardBody,

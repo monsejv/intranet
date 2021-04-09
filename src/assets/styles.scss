@@ -28,6 +28,8 @@ $body-bg:           #fbfbfb;
     src: local('AvenirLTStd-Heavy'), url('./fonts/AvenirLTStd-Heavy.woff') format('woff');
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
 .font-{
     &avenir-heavy{
         font-family: 'AvenirLTStd-Heavy';
@@ -54,8 +56,7 @@ $body-bg:           #fbfbfb;
   
 
 body {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-bottom: 1em;
     color:$text-black!important;
     font-weight: 500!important;
     background-color: #f9fbfd!important;
@@ -66,14 +67,14 @@ body {
 .btn {
     cursor: pointer;
     display: flex;
-    width: fit-content;
+    width: max-content;
     align-items: center;
     background-color: $proto-orange;
     border-color: $proto-orange;
     font-size: 12px;
     height: 32px;
     &.next{
-        padding-right:40px;
+        padding-right:30px;
         background-image:url('./images/icon-arrow-right.svg');
         background-position:calc(100% - 10px) center;
         background-repeat: no-repeat;
@@ -102,6 +103,26 @@ body {
         background-size: 20px;
         background-repeat: no-repeat;
         padding-right: 30px;
+        padding-top: 15px;
+    }
+    .nav-item{
+        height: 72px;
+        display: table;
+        .nav-link{
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
+    .nav-link, .navbar-text{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        color: #000000;
+        height: 100%;
+        &.active{
+            color: $proto-orange;
+            border-bottom: 4px solid $proto-orange;
+        }
     }
 }
 
@@ -110,6 +131,7 @@ body {
 .apps-wrapper{
     width:100%;
     flex-wrap: wrap;
+    padding: 9% 0px 20% 0px;
     div[class^="app-icon"]{
         height:64px;
         background-position: center;
@@ -236,5 +258,123 @@ table{
         min-height: 300px;
         max-height: 700px;
         overflow-y: auto;
+    }
+}
+
+.blog-wrapper{
+    margin-top: 20px;
+    .back{
+        font-family: 'AvenirLTStd-Roman';
+        font-size: 16px;
+        font-weight: normal;
+        color: $text-black;
+        background-image: url('../assets/images/ico-back-gray.svg');
+        background-position: left;
+        background-size: 16px;
+        background-repeat: no-repeat;
+        padding-left: 30px;
+    }
+    .title-blog{
+        font-family: 'AvenirLTStd-Medium';
+        font-size: 38px;
+        font-weight: 500;
+        color: #000000;
+    }
+    .post{
+        white-space: pre-line;
+        font-family: 'AvenirLTStd-Medium';
+        font-size: 20px;
+        font-weight: 500;
+        color: $text-heavy-black;
+    }
+    .photo-by{
+        width: 67px;
+        height: 67px;
+    }
+    .data-user{
+        align-self: center;
+        margin-left: 10px;
+        p{
+            margin-bottom: 2px;
+            font-weight: 500;
+            line-height: 1;
+        }
+        .name{
+            font-size: 20px;
+            color: #000;
+        }
+        .sub{
+            font-size: 16px;
+            color: $text-black;
+        }
+        .times{
+            font-size: 12px;
+            color: #9f9f9f;
+        }
+    }
+    .social{
+        width: 130px;
+        justify-content: space-between;
+        .ico{
+            width: 30px;
+            height: 30px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            &.facebook{
+                background-image: url('../assets/images/facebook.png');
+            }
+            &.linkedin{
+                background-image: url('../assets/images/linkedin.png');
+            }
+            &.twitter{
+                background-image: url('../assets/images/twitter.png');
+            }
+        }
+    }
+    .footer{
+        border-top: 1px solid rgb(159, 159, 159);
+        margin-top: 2em;
+        .logo{
+            height: 50px;
+            width: 180px; 
+            background-size: contain;   
+            background-repeat: no-repeat;
+            background-position: center;
+            &.prototype{
+                background-image: url('../assets/images/logo-prototype.svg');
+            }
+            &.nova{
+                background-image: url('../assets/images/logo-nova.png');
+            }
+            &.machina{
+                background-image: url('../assets/images/logo-machina.png');
+            }
+            &.precision{
+                background-image: url('../assets/images/logo-precision.png');
+            }
+        }
+    }
+}
+
+.fit-content{
+    height: fit-content;
+}
+
+.new-title{
+    font-family: "AvenirLTStd-Roman";
+    font-size: 32px;
+    font-weight: normal;
+    color: #000;
+}
+
+.new-nav{
+    a{
+        color: #9f9f9f;
+        font-family: "AvenirLTStd-Roman";
+        font-size: 16px;
+    }
+    b{
+        font-family: "AvenirLTStd-Heavy";
+        color: #282d30;
     }
 }

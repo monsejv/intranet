@@ -5,7 +5,6 @@ import { Container, Row, Col } from 'reactstrap';
 import GeneralCard from '../components/GeneralCard/Index'
 import Header from '../components/Header/Index'
 import RadarBox from '../components/RadarBox/Index';
-import UploadFiles from '../components/UploadFiles/Index';
 import UserMenu from '../components/UserMenu/Index'
 import UserCard from '../components/UserCard/Index'
 import SecondaryCard from '../components/SecondaryCard/Index';
@@ -98,7 +97,7 @@ const Home = () => {
 
     return (
 
-        <Container fluid>
+        <Container fluid className="pt-3">
             <Row>
                 <Col sm="3" >
                     <RadarBox />
@@ -113,7 +112,6 @@ const Home = () => {
                             </div>
                         </Col>
                     </Row>
-                    <UploadFiles />
                     <Row>
                         <Col>
                             <SecondaryCard data={birthdays} />

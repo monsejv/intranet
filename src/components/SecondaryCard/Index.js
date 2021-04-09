@@ -53,7 +53,7 @@ const SecondaryCard = props => {
       }
 
     return(
-        <section>
+        <>
             <WidgetsModal toggle={toggle} modal={modal} 
                             dataModal={ birthdays ? birthdayCalendar : rebootersOfMonth } 
                             className={ birthdays ? "birthday-bg" : "rebooters-bg"} ></WidgetsModal>
@@ -83,7 +83,7 @@ const SecondaryCard = props => {
                         </div>
                     }
                     { courses &&
-                        <div>
+                        <>
                         { courses.map(list => {
                             return <div class="d-flex cursos-wrapper">
                                 <Media src={list.image} />
@@ -96,7 +96,7 @@ const SecondaryCard = props => {
                                 </div>
                             </div>
                         })}
-                        </div>
+                        </>
                     }
                     {
                         celebrations &&
@@ -111,7 +111,7 @@ const SecondaryCard = props => {
                         }
                 </CardBody>
             </Card>
-        </section>
+        </>
     )
 }
 

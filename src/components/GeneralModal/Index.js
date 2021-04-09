@@ -36,7 +36,7 @@ const GeneralModal = props => {
                 <Media src={RadarMap.default} width="100%" alt="Radar" />
              }
              { files &&
-                <div>
+                <>
                     <div className="my-form d-flex justify-content-center align-items-center" id="file-drop" draggable="true">
                         <Form>
                             <FormGroup className="text-center">
@@ -53,7 +53,7 @@ const GeneralModal = props => {
                         <p className="font-avenir-medium">Tamaño máximo: 10MB</p>
                     </div>
                     <Button color="primary">Enviar documentos</Button>
-                </div>
+                </>
              }
             </ModalBody>
         </Modal>

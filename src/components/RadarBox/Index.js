@@ -27,7 +27,7 @@ const RadarBox = props => {
     const textAlert = 'Se te notificará un día antes de que abramos la prueba vía correo electrónico, para que estes al pendiente e inicies la prueba.'
 
     return(
-        <section>
+        <>
             <GeneralModal modalStatus={modal} radar={true} fc={toggle}  />
             <TableModal modalStatus={modalHnds} dataModal={herramientas} fc={toggleHands} className="up-hand" textAlert={textAlert}  />
             <Card className="mb-4 shadow">
@@ -46,7 +46,7 @@ const RadarBox = props => {
                 </div>
                 </CardBody>
             </Card>
-        </section>
+        </>
     )
 }
 

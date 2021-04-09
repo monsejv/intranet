@@ -16,6 +16,8 @@ import { eventsList } from '../../lib/events'
 import Moment from 'react-moment';
 import 'moment/locale/es';
 
+import './style.scss'
+
 const EventsCard = props => {
     const { title, 
             subtitle, 
@@ -48,7 +50,7 @@ const EventsCard = props => {
     const [index, setIndex] = useState(0)
     
     return(
-        <section>
+        <>
             <FlayerModal nestedModal={nestedModal} toggleNested={toggleNested} closeAll={closeAll} toggle={toggle} toggleAll={toggleAll} dataModal={eventsList.list[index]} events={true} />
             <CardsModal toggle={toggle} modal={modal} nested={toggleNested}
                         dataModal={eventsList} className="events" />
@@ -58,17 +60,20 @@ const EventsCard = props => {
                         <CardTitle>{cardTitle}</CardTitle>
                         <Link to={news ? link : '#'} className="font-avenir-heavy" onClick={ !news ? toggle : false}>{textLink}</Link>
                     </div>
-                    <div className="d-flex card-news">
-                    <CardImg src={cover.url }/>
-                    <div className="ml-2">
-                        <CardTitle>{title}</CardTitle>
-                        <CardSubtitle>{subtitle}</CardSubtitle>
-                        <CardText>Fecha y hora: <Moment format="DD [de] MMMM" locale="es">{date}</Moment> {startTime && startTime.slice(0, -3)} hrs</CardText>
-                    </div>
+                    <div className="d-flex body-news">
+                        <CardImg src={cover.url }/>
+                        <div className="ml-2">
+                            <CardTitle>{title}</CardTitle>
+                            <CardSubtitle>{subtitle}</CardSubtitle>
+                            { news 
+                                ?  <CardText><Moment fromNow locale="es">{date}</Moment></CardText>
+                                :   <CardText>Fecha y hora: <Moment format="DD [de] MMMM" locale="es">{date}</Moment> {startTime && startTime.slice(0, -3)} hrs</CardText>
+                            }
+                        </div>
                     </div>
                 </CardBody>
             </Card>
-        </section>
+        </>
     )
 }
 

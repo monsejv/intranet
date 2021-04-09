@@ -24,6 +24,8 @@ const GeneralCard = props => {
         textButton,
         showModalFc
       }  = props.data
+    
+    const {classButton} = props
 
     const [modalProt, setModalP] = useState(false);
     const [nestedModal, setNestedModal] = useState(false);
@@ -40,7 +42,7 @@ const GeneralCard = props => {
     }
 
     return(
-      <section>
+      <>
           <FlayerModal nestedModal={nestedModal} toggleNested={toggleNested} closeAll={closeAll} toggle={toggleProto} toggleAll={toggleAll} dataModal={detailPrototype}  />
           <TableModal modalStatus={modalProt} dataModal={prototipos} fc={toggleProto} nested={toggleNested} className="up-hand"  />
             <Card className="mb-4 shadow">
@@ -48,10 +50,10 @@ const GeneralCard = props => {
                 <CardImg  src={img} className={classImage} alt="Card image cap" />
                 <CardTitle tag="h5" className="mt-3">{title}</CardTitle>
                 <CardText>{text}</CardText>
-                <Button color="primary" className="next" onClick={ title === '¡Probando prototipos!' ? toggleProto : false}>{textButton}</Button>
+                <Button color="primary" className="next " onClick={ title === '¡Probando prototipos!' ? toggleProto : false}>{textButton}</Button>
                 </CardBody>
             </Card>
-      </section>
+      </>
     )
 }
 

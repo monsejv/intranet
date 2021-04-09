@@ -4,22 +4,69 @@
     box-shadow: 0px 2px 5px 1px rgba(164, 164, 164, 0.25);
     img{
         border-radius: 10px;
-        height: 128px;
-        width: 152px;
+        width: 50%;
+        height: auto;
     }
     .btn-primary{
         border-radius: 4px;
         height: 24px;
+        padding: 2px 0px;
         width: 88px;
+        text-align: center;
+        display: block;
+        &.prototype{
+            background: #f89521;
+            border-color: #f89521;
+        }   
+        &.nova{
+            background: #0070b9;
+            border-color: #0070b9;
+        }
+        &.machina{
+            background: #ef4136;
+            border-color: #ef4136;
+        }
     }
     .card-title{
         font-family: "AvenirLTStd-Medium";
         font-weight: 500;
         font-size: 16px;
+        color: #000000;
+    }
+    .card-subtitle{
+        color: #282d30;
     }
     .card-text{
         font-size: 12px;
         font-weight: 500;
         color: #000000;
+        margin-bottom: 5px;
+    }
+    .text-date{
+        color: #5f5f5f;
+        font-family: "AvenirLTStd-Medium";
+        font-weight: 500;
+        font-size: 10px;
+    }
+    &.big-card{
+        img{
+            width: 47%; 
+            height: auto; 
+        }
+        .card-title{
+            font-size: 38px;
+        }
+        .card-subtitle{
+            font-family: "AvenirLTStd-Roman";
+            font-size: 22px;
+            font-weight: normal;
+        }
+        .card-text{
+            font-size: 20px;
+        }
+        .text-date{
+            font-size: 18px;
+        }
     }
 }
+

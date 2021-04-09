@@ -26,7 +26,7 @@ const UserCard = props => {
     const toggle = () => setModal(!modal);
 
     return(
-        <section>
+        <>
             <WidgetsModal toggle={toggle} modal={modal} dataModal={usersBook} className="directory" ></WidgetsModal>
             <Card className="user-data mb-4 shadow">
                 <CardBody>
@@ -59,7 +59,7 @@ const UserCard = props => {
                     </div>
                 </CardBody>
             </Card>
-        </section>
+        </>
     )
 }
 

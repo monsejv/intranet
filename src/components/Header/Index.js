@@ -7,16 +7,16 @@ import { Logo } from '../../assets/Index'
 
 const Header = (props) => {
     return(
-        <section>
+        <>
             <Link to="/">
-                <Media className="logo-image" src={Logo.default} />
+                <Media className="logo-image mt-5" src={Logo.default} />
             </Link>
             <Form >
                 <FormGroup className="search-wrapper mt-5">
                     <Input type="text" id="searching" placeholder="¿Qué necesitas? Puedes buscar proyectos, herramientas..." />
                 </FormGroup>
             </Form>
-        </section>
+        </>
     )
 }
 

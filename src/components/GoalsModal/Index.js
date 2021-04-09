@@ -56,10 +56,10 @@ const GoalsModal = props => {
                                                             ? <span className="icon-block"></span>
                                                             : detail.completed === '100' 
                                                                 ? <CardText>Ganado el <Moment format="DD [de] MMMM[, ]YYYY" locale="es" className="text-capitalize">{detail.winDate}</Moment></CardText>
-                                                                :   <div>
+                                                                :   <>
                                                                         <Progress color="success" value={detail.completed} />
                                                                         <CardText>{detail.completed}% completado</CardText>
-                                                                    </div>
+                                                                    </>
  
                                                         }
                                                     </CardBody>
