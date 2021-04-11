@@ -5,7 +5,7 @@ export const cardsLeft = [{
     title: '¡Probando prototipos!',
     img: `${Illustration.default}`,
     classImage: '',
-    text: 'Tenemos este AB Testing corriendo en este momento ¿Nos quieres ayudar a probar?',
+    text: `Tenemos este AB Testing corriendo en este momento ¿Nos quieres ayudar a probar?`,
     textButton: 'Probar prototipo',
     showModalFc: 'toggleProto',
 },

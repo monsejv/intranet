@@ -85,7 +85,6 @@ const Home = () => {
         const getBamboo = async () => {
             try {
                 const bamboo = await api.getBamboo()
-                console.log(bamboo)
             } catch (error) {
                 console.log(error)
             }

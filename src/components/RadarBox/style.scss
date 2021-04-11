@@ -19,5 +19,8 @@
         font-size:10px;
         font-family:'AvenirLTStd-Medium' ;
         padding:0;
+        &:focus{
+            box-shadow: none;
+        }
     }
 }

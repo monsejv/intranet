@@ -101,7 +101,7 @@ const WidgetsModal = props => {
                 }
             </ModalHeader>
             <ModalBody>
-                <div className={principal}>
+                <div className={"widgets-wrapper " + principal}>
                     { rebooters &&
                         <Button color="primary" className="next mb-3" onClick={toggleReboot}>Postular a alguien</Button>
                     }

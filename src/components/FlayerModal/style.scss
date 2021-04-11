@@ -30,9 +30,6 @@
         }
     }
     .modal-body{
-        min-height: auto!important;
-        max-height: auto!important;
-        overflow: hidden!important;
         .title{
             font-size: 12px;
             font-weight: 900;
@@ -97,5 +94,8 @@
                 background-size: 20px;
             }
         }
+    }
+    .modal-content{
+        max-height: fit-content!important;
     }
 }

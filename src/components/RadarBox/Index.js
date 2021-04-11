@@ -36,10 +36,10 @@ const RadarBox = props => {
                 <CardTitle tag="h5" className="mt-4">El radar</CardTitle>
                 <CardText>Plataformas,técnicas, herramientas, lenguajes & frameworks en tendencia.</CardText>
                 <Button color="primary" className="next" onClick={toggle}>Consultar radar</Button>
-                <CardTitle tag="h5" className="mt-4">Probando herramientas</CardTitle>
-                <CardText>Nuestro equipo de R+D de Reboot, se encuentra probando estas herramientas en fase beta. ¿Nos quieres ayudar a probar?</CardText>
+                <CardTitle tag="h5" className="mt-5">Probando herramientas</CardTitle>
+                <CardText>Nuestro equipo de R+D de Reboot, se encuentra probando estas herramientas en fase beta.<br/> ¿Nos quieres ayudar a probar?</CardText>
                 <Button color="primary" className="next" onClick={toggleHands}>Alza la mano</Button>
-                <CardText className="mt-4 font-avenir-medium">¿Quieres proponer una herramienta?</CardText>
+                <CardText className="mt-5 font-avenir-medium">¿Quieres proponer una herramienta?</CardText>
                 <div className="custom-form-wrapper">
                     <Input placeholder="Ingresa tu sugerencia" />
                     <Button color="secondary" disabled>Enviar</Button>

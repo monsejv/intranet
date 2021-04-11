@@ -19,7 +19,7 @@ const CardNews = props => {
         <Card horizontal className={'card-news ' + className}>
             <CardBody className="d-flex">
                 <Media src={cover} alt="Card image cap" className="mr-3" />
-                <div>
+                <div className="news-wrapper">
                     <Link to={{ pathname: '/blog', state: { data: props.dataNew } }} className={ "btn btn-primary text-capitalize mb-2 " + author.company}>{author.company}</Link>
                     <CardTitle tag="h5" className="mb-2">{title}</CardTitle>
                     { flag === 'recent' &&

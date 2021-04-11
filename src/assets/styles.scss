@@ -258,6 +258,29 @@ table{
         min-height: 300px;
         max-height: 700px;
         overflow-y: auto;
+        &::-webkit-scrollbar {
+            width: 8px; 
+        }
+        &::-webkit-scrollbar-track {
+            background: white;
+            border-radius: 4px;
+        }
+        
+        &::-webkit-scrollbar-track:hover,
+        &::-webkit-scrollbar-track:active {
+          background: white;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background: darkgray;
+            border-radius: 4px;
+        }
+    }
+}
+
+.modal{
+    .modal-content{
+        max-height: 90vh;
     }
 }
 
@@ -378,3 +401,5 @@ table{
         color: #282d30;
     }
 }
+
+

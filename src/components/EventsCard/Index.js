@@ -24,6 +24,7 @@ const EventsCard = props => {
             date, 
             startTime, 
             id, 
+            author,
             cover } = props.cardData
 
     const { cardTitle, 
@@ -48,6 +49,8 @@ const EventsCard = props => {
       }
 
     const [index, setIndex] = useState(0)
+
+    console.log(props.cardData)
     
     return(
         <>
@@ -64,7 +67,10 @@ const EventsCard = props => {
                         <CardImg src={cover.url }/>
                         <div className="ml-2">
                             <CardTitle>{title}</CardTitle>
-                            <CardSubtitle>{subtitle}</CardSubtitle>
+                            { author 
+                                ? <CardSubtitle>Por {author.name}</CardSubtitle>
+                                : <CardSubtitle>{subtitle}</CardSubtitle>
+                            }
                             { news 
                                 ?  <CardText><Moment fromNow locale="es">{date}</Moment></CardText>
                                 :   <CardText>Fecha y hora: <Moment format="DD [de] MMMM" locale="es">{date}</Moment> {startTime && startTime.slice(0, -3)} hrs</CardText>
